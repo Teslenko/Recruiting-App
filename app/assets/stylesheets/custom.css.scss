@@ -74,7 +74,7 @@ footer {
   padding-top: 0px;
   border-top: 1px solid #4c4545;
   color: #e8fcff;
-  text-align: -webkit-center;
+  //text-align: -webkit-center;
 }
 .Tesl{
   float: right;
@@ -128,7 +128,7 @@ footer :after {
   }
 
 .page-wrap {
-  min-height: calc(50vh - 41px);
+  min-height: calc(50vh - 50px);
 }
 
 
