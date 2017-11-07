@@ -16,10 +16,15 @@ gem 'uglifier', '>= 2.7.2'
 gem 'bootstrap-sass', ' 3.3.7'
 
 gem 'jquery-rails'
+
+
 group :development, :test do
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+  gem 'sqlite3'
 end
+
+
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -69,3 +74,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+
