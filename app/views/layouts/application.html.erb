@@ -10,10 +10,15 @@
   </head>
 
   <body>
+
   <%= render 'layouts/header' %>
-  <div class="container">
+  <header class="container">
+
   <%= yield %>
-  </div>
-  <%= render 'layouts/footer' %>
+    <div class="wrapper"><!--в этой строке мы можем разместить данныве которые будут показываться на всех страницах-->
+    </div>
+  </header>
+  <%= render 'layouts/footer', class: 'form' %>
   </body>
+
 </html>

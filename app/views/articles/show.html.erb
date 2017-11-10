@@ -1,23 +1,41 @@
 
 <div class="input-group-addon">
-  <p>
+  <div id="error_explanation2">
+  <p class="Name_andidate">
     <strong>The Title Of The Article:</strong>
     <%= @article.title %>
   </p>
 
-  <p >
+  <p class="Position">
     <strong>Description Article:</strong>
-    <%= @article.text %>
+    <%= @article.text%>
   </p>
+  </div>
+
+
+  <p >
+    <strong>Skills:</strong>
+    <%= @article.text%>
+  </p>
+
+
+
+  <p >
+    <strong>Expirience:</strong>
+    <%= @article.text%>
+  </p>
+
+
 </div>
 
 <div class="input-group-addon">
-<h2>Comments</h2>
+<h2>Notes</h2>
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
+<h2>Add a notes:</h2>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-large btn-primary" %> |
+
+<%= link_to 'Edit Person', edit_article_path(@article), class: "btn btn-large btn-primary" %> |
 <%= link_to 'Back to Home', articles_path, class: "btn btn-large btn-primary" %>
 </div>

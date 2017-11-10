@@ -14,18 +14,35 @@
         </div>
     <% end %>
 
-    <p>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
+
+    <p class="Name_andidate form-group">
+      <%= form.label :title, "Name Candidate"  %><br>
+      <%= form.text_field :title, class: 'form'%>
     </p>
 
-    <p>
-      <%= form.label :text %><br>
-      <%= form.text_area :text %>
+    <p class="Position">
+      <%= form.label :text, "Position" %><br>
+      <%= form.text_area :text, class: 'form'%>
     </p>
 
-    <p>
+    <p class="Skills">
+      <%= form.label :text, "Skills" %><br>
+      <%= form.text_area :text, class: 'form'%>
+    </p>
+
+    <p class="expirience">
+      <%= form.label :"expirience" %><br>
+      <%= form.text_area :text, class: 'form' %>
+    </p>
+
+    <p class="status">
+      <%= form.label :"status" %><br>
+      <%= form.text_area :text, class: 'form' %>
+    </p>
+
+    <p class="form-group">
       <%= form.submit %>
     </p>
 
 <% end %>
+

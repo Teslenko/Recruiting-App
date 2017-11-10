@@ -5,11 +5,13 @@ $grayMediumLight: #050023;
 
 html {
   overflow-y: scroll;
-}
+ }
 
 body {
-  padding-top: 60px;
-}
+  padding-top: 100px;
+  width: 100%;
+  background-attachment: scroll;
+ }
 
 section {
   overflow: auto;
@@ -32,9 +34,21 @@ textarea {
   margin-right: 10px;
 }
 
+.bodycenter{
+  width: 100%;
+  background-attachment: scroll;
+}
 
+.wrapper {
+  width: 100%;
+  height: 210px;
+  background: url(http://www.ellucian.com/uploadedImages/Images/Software/recruiter.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  //background-size: cover;
+  border: 1px #e8fcff solid;
 
-
+}
 /* header */
 
 #logo {
@@ -53,6 +67,7 @@ textarea {
 #logo:hover {
   color: #050023;
   text-decoration: none;
+
 }
 
 .navbar-inner{
@@ -64,6 +79,7 @@ textarea {
   padding: 5px;
 }
 
+/* button position in New Article and Edit */
 .ttt{
   padding-top: 10px;
 }
@@ -124,18 +140,18 @@ footer :after {
   display: block;
 }
 
-.footer, .push {
-  /* .push must be the same height as footer */
-  height: 140px;
+.footer, .push { /* .push must be the same height as footer */
+  height: 100px;
 }
 
-.footer{
+.footer{              /* тут мы делаем футер статичным и привязываем его к полу */
   background: #b0bedc;
-  }
-
-.page-wrap {
-  min-height: calc(50vh - 50px);
+  position: fixed;
+  bottom: 0%;
+  width: 100%
 }
+
+
 
 
 ////////////////////////

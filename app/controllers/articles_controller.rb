@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    # @articles = Article.search(params[:term])
   end
 
   def show
@@ -47,8 +48,27 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :text)
   end
 
-  def search
-    @results = Listing.search params[:search]
+  def self.search
+    @article = Article.ransack(title: params[:q]).result(distinct: true)
+    @article = Article.ransack(text: params[:q]).result(distinct: true)
+    if term
+      where('name LIKE ?', "%#{term}%")
+    else
+      all
+    end
+    # @books = Book.ransack(title_cont: params[:q]).result(distinct: true)
+    # @locations = Location.ransack(name_cont: params[:q]).result(distinct: true)
+    # @genres = Genre.ransack(genre_name_cont: params[:q]).result(distinct: true)
   end
+
+  def home
+  end
+
+  def contact
+  end
+
+  def help
+  end
+
 
 end

@@ -1,15 +1,17 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse ">
   <div class="navbar-inner">
+    <!--тут ссылка на картинку-->
     <div class="container">
+
       <div class="p1"><%= link_to "Recruiting Aplication", 'http://localhost:3000/articles', id: "logo", type: "button" %></div>
 
       <nav class="nav pull-right ">
         <p>
-          <%= link_to "Home",    "http://localhost:3000/articles", class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
-          <%= link_to "Help",    "#", class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
+          <%= link_to "Home",    "http://localhost:3000/pages/home", class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
+          <%= link_to "Help",    help_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
           <%= link_to "Sign in", "http://localhost:3000/signup", class: "btn btn-large btn-primary", id: "sign_in", type: "button"%>
       </p>
       </nav>
-    </div>
+      </div>
   </div>
 </header>
