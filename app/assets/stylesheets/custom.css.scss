@@ -8,7 +8,7 @@ html {
  }
 
 body {
-  padding-top: 100px;
+  padding-top: 70px;
   width: 100%;
   background-attachment: scroll;
  }
@@ -39,17 +39,51 @@ textarea {
   background-attachment: scroll;
 }
 
-.wrapper {
-  width: 100%;
+.wrapper { //фото с левой сторроны в Боди
+
   height: 210px;
   background: url(http://www.ellucian.com/uploadedImages/Images/Software/recruiter.png);
   background-repeat: no-repeat;
   background-position: left top;
   //background-size: cover;
-  border: 1px #e8fcff solid;
+  border: 1px #FFFFFF solid;
+
 
 }
-/* header */
+
+.wrapper2 {  //фото с правой сторроны в Боди
+
+  height: 210px;
+  background: url(https://images.uptowork.net/_utw/media/recruiter-off.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  //background-size: cover;
+  border: 1px #FFFFFF solid;
+
+}
+
+/* Sinup page ------------------------------------------------------------------------------------*/
+
+/* registration - sinup page */
+.form_signup{
+  padding-top: 30px;
+}
+.actions-button{
+  padding-top: 25px;
+}
+/* forgot page */
+.actions-forgot-page{
+  padding-top: 30px;
+}
+
+
+/* header ------------------------------------------------------------------------------------ */
+
+
+.Logoimage{
+  float: left;
+}
+
 
 #logo {
   float: left;
@@ -61,7 +95,6 @@ textarea {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-
 }
 
 #logo:hover {
@@ -88,7 +121,9 @@ textarea {
   padding-top: 10px;
 }
 
-/* footer */
+
+
+/* footer ------------------------------------------------------------------------------------*/
 
 footer {
 
@@ -98,6 +133,15 @@ footer {
   color: #e8fcff;
   //text-align: -webkit-center;
 }
+
+.myplaning{
+  float: right;
+  padding: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .Tesl{
   float: right;
   padding: 15px;
@@ -153,9 +197,7 @@ footer :after {
 
 
 
-
-////////////////////////
-/* typography */
+/* typography ------------------------------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;

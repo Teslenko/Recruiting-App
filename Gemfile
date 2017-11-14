@@ -19,11 +19,15 @@ gem 'jquery-rails'
 
 gem 'carrierwave' # через Gemfile
 
+
+
 group :development, :test do
 # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
+# gem 'pg'
 
+gem 'high_voltage', '~> 3.0.0'
 
 gem 'jquery-ui-rails'
 

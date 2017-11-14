@@ -43,10 +43,7 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  private
-  def article_params
-    params.require(:article).permit(:title, :text)
-  end
+
 
   def self.search
     @article = Article.ransack(title: params[:q]).result(distinct: true)
@@ -70,5 +67,9 @@ class ArticlesController < ApplicationController
   def help
   end
 
+  private
+  def article_params
+    params.require(:article).permit(:title, :position, :skills, :expirience, :status)
+  end
 
 end

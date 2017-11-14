@@ -1,9 +1,24 @@
 Rails.application.routes.draw do
 
+
+
+  devise_for :users do
+    get '/sign_out' => 'devise/sessions#destroy'
+    get '/log_in' => 'devise/sessions#new'
+    get '/log_out' => 'devise/sessions#destroy'
+    get '/sign_up' => 'devise/registrations#new'
+    get '/edit_profile' => 'devise/registrations#edit'
+  end
+  get 'persons/profile'
   get 'pages/contact'
 
-  get 'pages/home'
+  resources :users, :only => [:new, :create, :show]
+  get 'users/new' => 'users#new'
+  post 'users/' => 'users#create'
+  post 'users/:first_name' => 'users#show'
 
+  get 'pages/home'
+  get 'persons/profile', as: 'user_root'
   get 'pages/contact'
   get 'users/new'
   get '/about' => 'pages#about'
