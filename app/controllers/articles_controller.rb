@@ -58,6 +58,35 @@ class ArticlesController < ApplicationController
     # @genres = Genre.ransack(genre_name_cont: params[:q]).result(distinct: true)
   end
 
+  def authenticate_user!
+    unless current_user
+      if request.xhr?
+        render json: {msg: "Вы не авторизованы"}, status: 403
+      else
+        redirect_to root_path
+      end
+    end
+  end
+
+  def user_not_authorized
+    if request.xhr?
+      render json: {msg: "Нет прав на данное действие"}, status: 403
+    else
+      redirect_to root_path
+    end
+  end
+
+  def user_banned?
+    if current_user && current_user.banned?
+      if request.xhr?
+        render json: {msg: "Вы заблокированы"}, status: 403
+      else
+        sign_out
+        redirect_to root_path
+      end
+    end
+  end
+
   def home
   end
 
