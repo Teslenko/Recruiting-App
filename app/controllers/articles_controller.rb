@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+
+  
   def index
     @articles = Article.all
     # @articles = Article.search(params[:term])
@@ -45,18 +47,28 @@ class ArticlesController < ApplicationController
 
 
 
-  def self.search
-    @article = Article.ransack(title: params[:q]).result(distinct: true)
-    @article = Article.ransack(text: params[:q]).result(distinct: true)
-    if term
-      where('name LIKE ?', "%#{term}%")
-    else
-      all
+  def search
+    @articles = Article.ransack(title_cont: params[:q]).result(distinct: true)
+    # @users= Article.ransack(:skills: params[:q]).result(distinct: true)
+
+    respond_to do |format|
+      format.html{}
+      format.json{}
     end
+
+  end
+
+    # @article = Article.ransack(title: params[:q]).result(distinct: true)
+    # @article = Article.ransack(position: params[:q]).result(distinct: true)
+    # if term
+    #   where('name LIKE ?', "%#{term}%")
+    # else
+    #   all
+    # end
     # @books = Book.ransack(title_cont: params[:q]).result(distinct: true)
     # @locations = Location.ransack(name_cont: params[:q]).result(distinct: true)
     # @genres = Genre.ransack(genre_name_cont: params[:q]).result(distinct: true)
-  end
+
 
   def authenticate_user!
     unless current_user

@@ -54,6 +54,8 @@ gem 'devise'
 
 gem 'carrierwave'
 
+gem 'ransack'
+
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'

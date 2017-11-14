@@ -6,13 +6,52 @@ $grayMediumLight: #050023;
 html {
   overflow-y: scroll;
  }
-
+//body------------------------------------------------------------------------------------
 body {
   padding-top: 70px;
   width: 100%;
   background-attachment: scroll;
  }
 
+    //About Page
+.container-about {
+  text-align: center;
+  text-align: match-parent;
+  background: url(http://biz.liga.net/upload/iblock/3e9/3e90ae5df5d6b6679b53881cea3488be.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: bottom;
+    text-decoration: none;
+}
+.text-dangero{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+    //Contacts Page
+.container-about2{
+  text-align: center;
+  text-align: match-parent;
+  background: url(http://www.recruitmentintelligence.com/blog/wp-content/uploads/2016/12/recruitment-firms-executive-search-firms.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: bottom;
+  text-decoration: none;
+}
+.text-dangero-contacts{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+    //My Planing Page
+.text-my-planing{
+  text-align: left;
+  font-size: 1.5em;
+}
+
+//------------------------------------------------------------------------------------
 section {
   overflow: auto;
 }

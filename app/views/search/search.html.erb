@@ -1,8 +1,8 @@
-<% if params[:q].present? %>
-    <h1>Search Results for "<%= params[:q] %>" </h1>
-<% else %>
-    <h1><%= "Please, type anything " %>  </h1>
-<% end %>
+<%# <% if params[:q].present? %>
+    <!--<h1>Search Results for " <%# <%= params[:q] %>" </h1>-->
+<%# <% else %>
+    <!--<h1> <%# <%= "Please, type anything " %>  </h1>-->
+<%# <% end %>
 
 
 
@@ -16,3 +16,25 @@
       <%#<% end %>
 
 </div>
+
+<% if params[:q].present? %>
+    <h1>Search Results for "<%= params[:q] %>" </h1>
+<% else %>
+    <h1><%= "Please, type anything" %> </h1>
+<% end %>
+
+
+<div>
+  <% if @articles.present? %>
+      <h2>Books:</h2>
+  <% end %>
+
+  <% @articles.each do |article| %>
+      <%= link_to article.title, article_path(article) %>
+  <% end %>
+
+</div>
+
+
+
+
