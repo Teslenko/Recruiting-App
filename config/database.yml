@@ -8,7 +8,7 @@ default: &default
   adapter: sqlite3
 
 #  adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 
 development:
@@ -33,9 +33,32 @@ test:
 
 
 production:
-
-
-#  database: db
-
+  database: db
   <<: *default
   database: db/production.sqlite3
+
+
+#default: &default
+##  host: localhost
+#  adapter: mysql2
+#  encoding: utf8
+#  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#  username: root
+#  password: "1"
+#  socket: /var/run/mysqld/mysqld.sock
+#
+#development:
+#    <<: *default
+#    database: search2_dev
+#
+#test:
+#      <<: *default
+#      database: search2_dev_test
+#
+#production:
+#        adapter: postgresql
+#        encoding: unicode
+#        database: search2_dev
+#        pool: 5
+#        username: root
+#        password: 1

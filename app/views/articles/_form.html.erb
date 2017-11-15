@@ -18,16 +18,26 @@
     <p class="Name_andidate form-group">
       <%= form.label :title, "Name Candidate"  %><br>
       <%= form.text_field :title, class: 'form'%>
+
     </p>
 
-    <p class="Position">
+    <p class="field">
       <%= form.label :position , "Position" %><br>
       <%= form.text_area :position, class: 'form'%>
+      <%#= form.select(:title, [['Junior Software Engineer'], ['Software Engineer'], ['Senior Software Engineer'], ['Technical Lead'], ['System Architect'],
+                               ['Team lead'], ['Project manager'], ['Senior Project Manager / Program Manager'], ['Director of Engineering / Program Director'],
+                               ['Junior QA engineer'], ['QA engineer'], ['Senior QA engineer'], ['QA Tech Lead'],
+                               ['Business analyst'], ['Data Scientist / Data Analyst'], ['DBA'], ['Designer'], ['DevOps'],
+                               ['ERP / CRM'], ['Game designer'], ['HR'], ['HTML Coder'], ['Marketing'], ['Research Engineer'], ['Sales manager'],
+                               ['Scrum Master'], ['Security Specialist'], ['Support'], ['Sysadmin'], ['Talent Researcher'], ['Technical writer']]) %>
     </p>
 
     <p class="Skills">
       <%= form.label :skills, "Skills" %><br>
       <%= form.text_area :skills, class: 'form'%>
+      <%#= form.select(:title, [['1С'], ['ABAP'], ['APL'], ['C'], ['C#/.NET'], ['C++'], ['Delphi'], ['Erlang'],
+                               ['Flex/Flash/AIR'], ['Golang'], ['Haskell'], ['Human Resources'], ['Java'], ['JavaScript'], ['Objective-C'],
+                               ['Other'], ['Perl'], ['PHP'], ['Python'], ['Ruby/Rails'], ['Scala'], ['SQL'], ['Swift']]) %>
     </p>
 
     <p class="expirience">
@@ -40,8 +50,13 @@
       <%= form.text_area :status, class: 'form' %>
     </p>
 
+    <p class="status">
+      <%= form.label :data, "Salary '$'" %><br>
+      <%= form.text_area :data, class: 'form' %>
+    </p>
+
     <p class="form-group">
-      <%= form.submit "Create New Candidate", class: 'btn btn-large btn-primary' %>
+      <%= form.submit "Create/Update", class: 'btn btn-large btn-primary' %>
     </p>
 
 <% end %>

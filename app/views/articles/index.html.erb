@@ -10,7 +10,11 @@
 <%#<% end %>
 <!--</div>-->
 
+<!--<div class="container"> -->
+  <!--<div class="row">-->
 
+  <!--</div>-->
+<!--</div>-->
 
 
 
@@ -23,8 +27,37 @@
 </div>
 <br>
 
+<h3 class="">Your active Vacancies</h3>
+<!--center form_signup-->
 
 
+<table class="table table-striped container bg-info table-responsive">
+
+  <div class="col-xs-8">
+    <tr>
+      <div class="container" >
+        <div class="row">
+          <th>Summary</th>
+          <th>Description</th>
+          <th>Company</th>
+
+        </div>
+      </div>
+    </tr>
+  </div>
+
+  <tbody >
+  <div class="views_vacansies">
+    <% @vacancies.each do |vacancy| %>
+        <tr >
+          <td><%= vacancy.summary %></td>
+          <td><%= vacancy.description %></td>
+          <td><%= vacancy.company %></td>
+        </tr>
+    <% end %>
+  </div>
+  </tbody>
+</table>
 
 <br>
 <br>
@@ -52,6 +85,7 @@
               <th>Skills</th>
               <th>Experience</th>
               <th>Status</th>
+              <th>Salary</th>
 
           </div>
           </div>
@@ -68,6 +102,7 @@
         <td><%= article.skills %></td>
         <td><%= article.expirience %></td>
         <td><%= article.status %></td>
+        <td><%= article.data %></td>
         <td><%= link_to 'Show', article_path(article), class: "btn btn-large btn-primary", type: "button" %></td>
         <td><%= link_to 'Edit', edit_article_path(article), class: "btn btn-mini btn-primary", type: "button"%></td>
         <td><%= link_to 'Destroy', article_path(article), class: "btn btn-mini btn-primary", type: "button",

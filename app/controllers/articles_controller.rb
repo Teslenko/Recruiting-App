@@ -1,13 +1,16 @@
 class ArticlesController < ApplicationController
 
-  
+
   def index
     @articles = Article.all
+    @vacancies = Vacancy.all
+
     # @articles = Article.search(params[:term])
   end
 
   def show
     @article = Article.find(params[:id])
+
   end
 
   def new
@@ -100,6 +103,7 @@ class ArticlesController < ApplicationController
   end
 
   def home
+
   end
 
   def contact
@@ -108,9 +112,12 @@ class ArticlesController < ApplicationController
   def help
   end
 
+
+
+
   private
   def article_params
-    params.require(:article).permit(:title, :position, :skills, :expirience, :status)
+    params.require(:article).permit(:title, :position, :skills, :expirience, :status, :data)
   end
 
 end

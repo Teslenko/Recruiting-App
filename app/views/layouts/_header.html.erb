@@ -13,8 +13,8 @@
 
       <nav class="nav pull-right ">
         <p>
-          <%= link_to "My Vacancies",    "http://localhost:3000/pages/home", class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
-          <%= link_to "Help",    help_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
+          <%= link_to "My Vacancies", vacancies_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
+          <%= link_to "Help", help_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
 
 
           <% if user_signed_in? %>

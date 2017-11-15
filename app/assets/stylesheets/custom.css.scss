@@ -22,7 +22,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-position: bottom;
-    text-decoration: none;
+  text-decoration: none;
 }
 .text-dangero{
   text-align: center;
@@ -101,6 +101,11 @@ textarea {
 
 }
 
+.views_vacansies{ //вьюха на главной странице О наличии новых вакансиях
+  float: right;
+  border: 1px #FFFFFF solid;
+}
+
 /* Sinup page ------------------------------------------------------------------------------------*/
 
 /* registration - sinup page */
@@ -137,7 +142,7 @@ textarea {
 }
 
 #logo:hover {
-  color: #050023;
+  color: #1748a4;
   text-decoration: none;
 
 }
