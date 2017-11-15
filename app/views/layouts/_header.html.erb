@@ -1,0 +1,33 @@
+<header class="navbar navbar-fixed-top navbar-inverse ">
+  <div class="navbar-inner">
+    <!--тут ссылка на картинку-->
+
+    <div class="Logoimage">
+      <%= image_tag("Recruiter.png", size: "200x50",:alt => "rss feed", id:'booksget_logo') %>
+    </div>
+
+
+    <div class="container">
+
+      <div class="p1"><%= link_to "Recruiting Application", 'http://localhost:3000/articles', id: "logo", type: "button" %></div>
+
+      <nav class="nav pull-right ">
+        <p>
+          <%= link_to "My Vacancies", vacancies_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
+          <%= link_to "Help", help_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
+
+
+          <% if user_signed_in? %>
+              <span>Здравствуйте, <%= current_user.email %></span>
+              <%= link_to 'LogOut', destroy_user_session_path, class: "btn btn-large btn-primary"  %>
+          <% else %>
+              <%= link_to 'Login', new_user_session_path, class: "btn btn-large btn-primary" %> or <%= link_to 'Sign in', new_user_registration_path, class: "btn btn-large btn-primary" %>
+          <% end %>
+
+          <%# <%= link_to "Sign in", "http://localhost:3000/signup", class: "btn btn-large btn-primary", id: "sign_in", type: "button"%>
+      </p>
+      </nav>
+      </div>
+  </div>
+</header>
+

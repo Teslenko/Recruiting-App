@@ -1,0 +1,272 @@
+@import "bootstrap";
+
+$grayMediumLight: #050023;
+/* universal */
+
+html {
+  overflow-y: scroll;
+ }
+//body------------------------------------------------------------------------------------
+body {
+  padding-top: 70px;
+  width: 100%;
+  background-attachment: scroll;
+ }
+
+    //About Page
+.container-about {
+  text-align: center;
+  text-align: match-parent;
+  background: url(http://biz.liga.net/upload/iblock/3e9/3e90ae5df5d6b6679b53881cea3488be.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: bottom;
+  text-decoration: none;
+}
+.text-dangero{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+    //Contacts Page
+.container-about2{
+  text-align: center;
+  text-align: match-parent;
+  background: url(http://www.recruitmentintelligence.com/blog/wp-content/uploads/2016/12/recruitment-firms-executive-search-firms.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: bottom;
+  text-decoration: none;
+}
+.text-dangero-contacts{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+    //My Planing Page
+.text-my-planing{
+  text-align: left;
+  font-size: 1.5em;
+}
+
+//------------------------------------------------------------------------------------
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.foe{
+  float: left;
+  margin-right: 10px;
+}
+
+.bodycenter{
+  width: 100%;
+  background-attachment: scroll;
+}
+
+.wrapper { //фото с левой сторроны в Боди
+
+  height: 210px;
+  background: url(http://www.ellucian.com/uploadedImages/Images/Software/recruiter.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  //background-size: cover;
+  border: 1px #FFFFFF solid;
+
+
+}
+
+.wrapper2 {  //фото с правой сторроны в Боди
+
+  height: 210px;
+  background: url(https://images.uptowork.net/_utw/media/recruiter-off.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  //background-size: cover;
+  border: 1px #FFFFFF solid;
+
+}
+
+.views_vacansies{ //вьюха на главной странице О наличии новых вакансиях
+  float: right;
+  border: 1px #FFFFFF solid;
+}
+
+/* Sinup page ------------------------------------------------------------------------------------*/
+
+/* registration - sinup page */
+.form_signup{
+  padding-top: 30px;
+}
+.actions-button{
+  padding-top: 25px;
+}
+/* forgot page */
+.actions-forgot-page{
+  padding-top: 30px;
+}
+
+
+/* header ------------------------------------------------------------------------------------ */
+
+
+.Logoimage{
+  float: left;
+}
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #e8fcff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #1748a4;
+  text-decoration: none;
+
+}
+
+.navbar-inner{
+  background: #b0bedc;
+  padding: 10px;
+}
+
+.p1 {
+  padding: 5px;
+}
+
+/* button position in New Article and Edit */
+.ttt{
+  padding-top: 10px;
+}
+
+.ttt2{
+  padding-top: 10px;
+}
+
+
+
+/* footer ------------------------------------------------------------------------------------*/
+
+footer {
+
+  margin-top: 45px;
+  padding-top: 0px;
+  border-top: 1px solid #4c4545;
+  color: #e8fcff;
+  //text-align: -webkit-center;
+}
+
+.myplaning{
+  float: right;
+  padding: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Tesl{
+  float: right;
+  padding: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+footer a {
+  color: #e8fcff;
+  padding: 15px;
+  font-size: 15px;
+}
+footer small {
+  float: left;
+  margin-top: 2%;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 50px;
+  margin-top: 10%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -140px;
+
+}
+
+footer :after {
+  content: "";
+  display: block;
+}
+
+.footer, .push { /* .push must be the same height as footer */
+  height: 100px;
+}
+
+.footer{              /* тут мы делаем футер статичным и привязываем его к полу */
+  background: #b0bedc;
+  position: fixed;
+  bottom: 0%;
+  width: 100%
+}
+
+
+
+/* typography ------------------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #589933;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+
