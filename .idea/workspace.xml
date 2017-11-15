@@ -67,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/articles/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -110,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/vacancies/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -393,12 +393,12 @@
       <workItem from="1509698216931" duration="51066000" />
       <workItem from="1510151490146" duration="31903000" />
       <workItem from="1510331598016" duration="7846000" />
-      <workItem from="1510576568797" duration="55340000" />
+      <workItem from="1510576568797" duration="55529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156373000" />
+    <option name="totallyTimeSpent" value="156562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-83" width="1936" height="1056" extended-state="6" />
@@ -840,14 +840,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/vacancies/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding>
-            <element signature="e#743#1587#0#RHTML" expanded="true" />
-            <element signature="e#1723#2092#0#RHTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,11 +864,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/vacancies/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/articles/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="425">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="e#743#1587#0#RHTML" expanded="true" />
+            <element signature="e#1723#2092#0#RHTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
