@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @vacancies = Vacancy.all
+    @pets = Pet.all
 
     # @articles = Article.search(params[:term])
   end

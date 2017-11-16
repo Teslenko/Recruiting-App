@@ -1,0 +1,26 @@
+<div class="input-group-addon">
+  <div id="error_explanation2">
+  </div>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pet.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%#= @pet.image %>
+  <%= image_tag @pet.image.thumb.url %>
+</p>
+  </div>
+
+<div class="ttt">
+<%= link_to 'Edit', edit_pet_path(@pet), class: "btn btn-large btn-primary" %> |
+<%= link_to 'Back', pets_path, class: "btn btn-large btn-primary" %>
+</div>

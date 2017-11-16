@@ -9,6 +9,12 @@ ruby '2.4.1'
 
 gem 'rails', '~> 5.1.4'
 
+gem 'bcrypt','~> 3.1.7'
+
+gem "paperclip"#, "~> 5.1"
+
+gem 'image_magick'
+
 gem 'sass-rails', '~> 5.0'
 
 gem 'uglifier', '>= 2.7.2'
@@ -34,6 +40,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 
 gem 'ransack'
+
+gem 'mini_magick'
 
 group :development, :test do
   gem 'sqlite3'
