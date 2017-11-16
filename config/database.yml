@@ -32,10 +32,10 @@ test:
 #  database: db
 
 
-production:
-  database: db
-  <<: *default
-  database: db/production.sqlite3
+#production:
+#  database: db
+#  <<: *default
+#  database: db/production.sqlite3
 
 
 #default: &default
@@ -55,10 +55,10 @@ production:
 #      <<: *default
 #      database: search2_dev_test
 #
-#production:
-#        adapter: postgresql
-#        encoding: unicode
-#        database: search2_dev
-#        pool: 5
-#        username: root
-#        password: 1
+production:
+        adapter: postgresql
+        encoding: unicode
+        database: search2_dev
+        pool: 5
+        username: root
+        password: 1
