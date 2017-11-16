@@ -19,7 +19,6 @@ gem 'jquery-rails'
 
 gem 'carrierwave' # через Gemfile
 
-
 gem 'high_voltage', '~> 3.0.0'
 
 gem 'jquery-ui-rails'
