@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  resources :pets
   resources :vacancies
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'

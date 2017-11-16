@@ -23,8 +23,8 @@
 
     <p class="field">
       <%= form.label :position , "Position" %><br>
-      <%= form.text_area :position, class: 'form'%>
-      <%#= form.select(:title, [['Junior Software Engineer'], ['Software Engineer'], ['Senior Software Engineer'], ['Technical Lead'], ['System Architect'],
+      <%#= form.text_area :position, class: 'form'%>
+      <%= form.select(:position, [['Junior Software Engineer'], ['Software Engineer'], ['Senior Software Engineer'], ['Technical Lead'], ['System Architect'],
                                ['Team lead'], ['Project manager'], ['Senior Project Manager / Program Manager'], ['Director of Engineering / Program Director'],
                                ['Junior QA engineer'], ['QA engineer'], ['Senior QA engineer'], ['QA Tech Lead'],
                                ['Business analyst'], ['Data Scientist / Data Analyst'], ['DBA'], ['Designer'], ['DevOps'],
@@ -34,19 +34,21 @@
 
     <p class="Skills">
       <%= form.label :skills, "Skills" %><br>
-      <%= form.text_area :skills, class: 'form'%>
-      <%#= form.select(:title, [['1С'], ['ABAP'], ['APL'], ['C'], ['C#/.NET'], ['C++'], ['Delphi'], ['Erlang'],
+      <%#= form.text_area :skills, class: 'form'%>
+      <%= form.select(:skills, [['1С'], ['ABAP'], ['APL'], ['C'], ['C#/.NET'], ['C++'], ['Delphi'], ['Erlang'],
                                ['Flex/Flash/AIR'], ['Golang'], ['Haskell'], ['Human Resources'], ['Java'], ['JavaScript'], ['Objective-C'],
                                ['Other'], ['Perl'], ['PHP'], ['Python'], ['Ruby/Rails'], ['Scala'], ['SQL'], ['Swift']]) %>
     </p>
 
     <p class="expirience">
       <%= form.label :expirience, "Experience" %><br>
-      <%= form.text_area :expirience, class: 'form' %>
+      <%#= form.text_area :expirience, class: 'form' %>
+      <%= form.select(:expirience, [['>1 years'], ['1 years'], ['2 years'], ['3-5 years'], ['5-7 years'], ['8-10 years'], [' 10+ years'], ['15+ years'],
+                                ['20+ years']]) %>
     </p>
 
     <p class="status">
-      <%= form.label :status, "Status" %><br>
+      <%= form.label :status, "Company" %><br>
       <%= form.text_area :status, class: 'form' %>
     </p>
 
