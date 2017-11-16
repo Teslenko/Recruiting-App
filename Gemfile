@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.4.0'
+ruby '2.4.1'
 
 gem 'rails', '~> 5.1.4'
 
@@ -19,13 +19,6 @@ gem 'jquery-rails'
 
 gem 'carrierwave' # через Gemfile
 
-group :development, :test do
-<<<<<<< HEAD
-=======
-
->>>>>>> 645523a6bfd4cda7aeabd24fce50651943f5f592
-  gem 'sqlite3'
-end
 
 gem 'high_voltage', '~> 3.0.0'
 
@@ -43,15 +36,13 @@ gem 'devise'
 
 gem 'ransack'
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-end
-
-group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -67,12 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-
-<<<<<<< HEAD
-=======
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-
->>>>>>> 645523a6bfd4cda7aeabd24fce50651943f5f592
 end

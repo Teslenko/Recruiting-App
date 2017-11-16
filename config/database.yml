@@ -32,17 +32,17 @@ test:
 #  database: db
 
 
-<<<<<<< HEAD
+
 #production:
 #  database: db
 #  <<: *default
 #  database: db/production.sqlite3
-=======
+
 # production:
 #   database: db
 #   <<: *default
 #   database: db/production.sqlite3
->>>>>>> 645523a6bfd4cda7aeabd24fce50651943f5f592
+
 
 
 #default: &default
@@ -63,18 +63,12 @@ test:
 #      database: search2_dev_test
 #
 production:
-<<<<<<< HEAD
+
         adapter: postgresql
         encoding: unicode
         database: search2_dev
         pool: 5
         username: root
         password: 1
-=======
-       adapter: postgresql
-       encoding: unicode
-       database: search2_dev
-       pool: 5
-       username: root
-       password: 1
->>>>>>> 645523a6bfd4cda7aeabd24fce50651943f5f592
+
+       
