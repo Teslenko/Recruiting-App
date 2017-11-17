@@ -1,15 +1,138 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pets</h1>
+<h1>Listing All Candidate</h1>
+
+
+
+<!--//-------------------------------Search---------------------------------------->
+<div class="container search_margin_top">
+  <%= label_tag(:q, "Search for:") %>
+  <%= form_with url: search_path, local: true, method: :get do |form| %>
+      <%= form.text_field :q, :size =>"50", placeholder: "Search yours Candidate", data:{behavior: "autocomplete"}, class: "form-control width_of_search" %>
+      <%#= form.button "Search" %>
+  <% end %>
+</div>
+<br>
+
+<!--//-------------------------------Your active Vacancies---------------------------------------->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Effects - Show Demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    .toggler { width: 10px; height: 2px; }
+    #button { padding: .5em 5em; text-decoration: none; }
+    #effect { width: 1136px; height: 200px; padding: 0.4em; position: relative; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      $( function() {
+          // run the currently selected effect
+          function runEffect() {
+              // get effect type from
+              var selectedEffect = $( "#effectTypes" ).val();
+
+              // Most effect types need no options passed by default
+              var options = {};
+              // some effects have required parameters
+              if ( selectedEffect === "scale" ) {
+                  options = { percent: 50 };
+              } else if ( selectedEffect === "size" ) {
+                  options = { to: { width: 500, height: 100 } };
+              }
+
+              // Run the effect
+              $( "#effect" ).show( selectedEffect, options, 500, callback );
+          };
+
+          //callback function to bring a hidden box back
+          function callback() {
+              setTimeout(function() {
+                  $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+              }, 3000 ); // сколько секунд будет ждать открытой
+          };
+
+          // Set effect from select menu value
+          $( "#button" ).on( "click", function() {
+              runEffect();
+          });
+
+          $( "#effect" ).hide();
+      } );
+  </script>
+</head>
+<body>
+<!--//-------------Your active Vacancies-------------------->
+<!--<h3 class="">Your active Vacancies</h3>-->
+
+<div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Your active Vacancies</h3>
+
+    <table class="table table-striped container bg-info table-responsive">
+
+      <div class="col-xs-8">
+        <tr>
+          <div class="container" >
+            <div class="row">
+              <th>Summary</th>
+              <th>Description</th>
+              <th>Company</th>
+
+            </div>
+          </div>
+        </tr>
+      </div>
+
+      <tbody >
+      <div class="views_vacansies">
+        <% @vacancies.each do |vacancy| %>
+            <tr >
+              <td><%= vacancy.summary %></td>
+              <td><%= vacancy.description %></td>
+              <td><%= vacancy.company %></td>
+            </tr>
+            <td><%= link_to 'Show', vacancy, class: "btn btn-large btn-primary", type: "button"%></td>
+            <td><%= link_to 'Destroy', vacancy, class: "btn btn-large btn-primary", type: "button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </div>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--//---------------Run Effect------------------>
+<br> <br>
+<div class="View_open_position">
+  <select name="effects" id="effectTypes">
+    <option value="fold"></option>
+  </select>
+  <button id="button" class="ui-state-default ui-corner-all">View Open Position</button>
+</div>
+
+<!--//---------------Add New Candidate------------------>
+<div class="ttt form-group has-success">
+  <label class="control-label" for="succ">
+
+    <%= link_to 'Add New Candidate', new_pet_path, class: "btn btn-mini btn-primary", type: "button" %>
+
+  </label>
+</div>
 
 <table class="table table-striped container">
   <thead>
   <div class="col-xs-8">
     <tr><div class="container" >
       <div class="row">
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
+      <th>Photo</th>
+      <th>Name Candidate</th>
+        <th>Position</th>
+        <th>Company</th>
       <th colspan="3"></th></div></div>
     </tr>
   </div>
@@ -18,9 +141,10 @@
   <tbody>
     <% @pets.each do |pet| %>
       <tr>
-        <td><%= pet.name %></td>
-        <td><%= pet.description %></td>
         <td><%= image_tag pet.image.thumb.url %></td>
+        <td><%= pet.name %></td>
+        <td><%= pet.position_2 %></td>
+        <td><%= pet.company_2 %></td>
         <td><%= link_to 'Show', pet, class: "btn btn-mini btn-primary", type: "button" %></td>
         <td><%= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-primary", type: "button" %></td>
         <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-primary", type: "button" %></td>
@@ -31,5 +155,7 @@
 
 <br>
 
-<%= link_to 'New Pet', new_pet_path, class: "btn btn-mini btn-primary", type: "button"  %>
+
 </table>
+
+<%#= link_to 'New Pet', new_pet_path, class: "btn btn-mini btn-primary", type: "button"  %>

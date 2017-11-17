@@ -11,25 +11,92 @@
         </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :description %><br>
-      <%= f.text_area :description %>
-    </div>
-
 
     <div class="field">
-      <%= f.label :image%><br>
+      <%= f.label :image, "Avatar"%><br>
       <%= f.file_field :image %>
       <% if f.object.image? %>
           <%= image_tag f.object.image.thumb.url %>
           <%= f.label :remove_image %>
           <%= f.check_box :remove_image %>
       <% end %>
+
     </div>
+
+
+    <div class="field">
+      <%= f.label :name, "Name Candidate" %><br>
+      <%= f.text_field :name %>
+    </div>
+
+      <p class="field">
+        <%= f.label :birth_date_2 , "Birth Date" %><br>
+        <%= f.text_field :birth_date_2, class: 'form'%>
+      </p>
+
+    <div class="field">
+      <%= f.label :description, "Description" %><br>
+      <%= f.text_area :description %>
+    </div>
+
+      <p class="field">
+        <%= f.label :position_2, "Position" %><br>
+        <%#= f.text_area :position_2, class: 'form'%>
+        <%= f.select(:position_2, [['Junior Software Engineer'], ['Software Engineer'], ['Senior Software Engineer'], ['Technical Lead'], ['System Architect'],
+                                    ['Team lead'], ['Project manager'], ['Senior Project Manager / Program Manager'], ['Director of Engineering / Program Director'],
+                                    ['Junior QA engineer'], ['QA engineer'], ['Senior QA engineer'], ['QA Tech Lead'],
+                                    ['Business analyst'], ['Data Scientist / Data Analyst'], ['DBA'], ['Designer'], ['DevOps'],
+                                    ['ERP / CRM'], ['Game designer'], ['HR'], ['HTML Coder'], ['Marketing'], ['Research Engineer'], ['Sales manager'],
+                                    ['Scrum Master'], ['Security Specialist'], ['Support'], ['Sysadmin'], ['Talent Researcher'], ['Technical writer']]) %>
+      </p>
+
+      <p class="Skills">
+        <%= f.label :skills_2, "Skills" %><br>
+        <%#= form.text_area :skills, class: 'form'%>
+        <%= f.select(:skills_2, [['1С'], ['ABAP'], ['APL'], ['C'], ['C#/.NET'], ['C++'], ['Delphi'], ['Erlang'],
+                                  ['Flex/Flash/AIR'], ['Golang'], ['Haskell'], ['Human Resources'], ['Java'], ['JavaScript'], ['Objective-C'],
+                                  ['Other'], ['Perl'], ['PHP'], ['Python'], ['Ruby/Rails'], ['Scala'], ['SQL'], ['Swift']]) %>
+      </p>
+
+      <p class="expirience">
+        <%= f.label :expirience_2, "Experience" %><br>
+        <%#= form.text_area :expirience, class: 'form' %>
+        <%= f.select(:expirience_2, [['>1 years'], ['1 years'], ['2 years'], ['3-5 years'], ['5-7 years'], ['8-10 years'], [' 10+ years'], ['15+ years'],
+                                      ['20+ years']]) %>
+      </p>
+
+      <p class="status">
+        <%= f.label :company_2, "Company" %><br>
+        <%= f.text_area :company_2, class: 'form' %>
+      </p>
+
+      <p class="status">
+        <%= f.label :salary_2, "Salary '$'" %><br>
+        <%= f.text_area :salary_2, class: 'form' %>
+      </p>
+
+      <p class="status">
+        <%= f.label :city_2, "City" %><br>
+        <%= f.text_area :city_2, class: 'form' %>
+      </p>
+
+      <p class="status">
+        <%= f.label :skype_2, "Skype" %><br>
+        <%= f.text_area :skype_2, class: 'form' %>
+      </p>
+
+      <p class="status">
+        <%= f.label :telephone_2, "Telephone" %><br>
+        <%= f.text_area :telephone_2, class: 'form' %>
+      </p>
+
+      <p class="status">
+        <%= f.label :eng_lev_2, "English Level" %><br>
+        <%= f.select(:eng_lev_2, [['Elementary'], ['Pre-intermediate'], ['Intermediate'], ['Upper-intermediate'], ['Perfection'], ['Native']]) %>
+      </p>
+
+
+
 
     <div class="actions">
       <%= f.submit class: 'btn btn-large btn-primary', class: 'btn btn-large btn-primary' %>

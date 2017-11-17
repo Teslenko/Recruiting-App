@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116141824) do
+ActiveRecord::Schema.define(version: 20171117175400) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -22,6 +22,12 @@ ActiveRecord::Schema.define(version: 20171116141824) do
     t.text "expirience"
     t.text "status"
     t.integer "data"
+    t.string "photo_candidate"
+    t.text "birth_date"
+    t.text "skype"
+    t.text "telephone"
+    t.text "city"
+    t.text "eng_lev"
   end
 
   create_table "avatars", force: :cascade do |t|
@@ -45,6 +51,16 @@ ActiveRecord::Schema.define(version: 20171116141824) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "position_2"
+    t.text "skills_2"
+    t.text "expirience_2"
+    t.text "company_2"
+    t.integer "salary_2"
+    t.text "birth_date_2"
+    t.text "skype_2"
+    t.integer "telephone_2"
+    t.text "city_2"
+    t.text "eng_lev_2"
   end
 
   create_table "users", force: :cascade do |t|

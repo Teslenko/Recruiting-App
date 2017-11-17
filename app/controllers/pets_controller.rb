@@ -5,6 +5,7 @@ class PetsController < ApplicationController
   # GET /pets.json
   def index
     @pets = Pet.all
+    @vacancies = Vacancy.all
   end
 
   # GET /pets/1
@@ -69,6 +70,6 @@ class PetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pet_params
-      params.require(:pet).permit(:name, :description, :image)
+      params.require(:pet).permit(:name, :description, :image, :position_2, :skills_2, :expirience_2, :company_2, :salary_2, :birth_date_2, :skype_2, :telephone_2, :city_2, :eng_lev_2)
     end
 end

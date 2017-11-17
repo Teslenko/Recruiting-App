@@ -2,10 +2,7 @@
 
     <% if @article.errors.any? %>
         <div id="error_explanation">
-          <h2>
-            <%= pluralize(@article.errors.count, "error") %> prohibited
-            this article from being saved:
-          </h2>
+          <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
           <ul>
             <% @article.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
@@ -15,10 +12,32 @@
     <% end %>
 
 
+<!--image-->
+        <!--<div class="field">-->
+      <%#= form.label :photo_candidate %><br>
+      <%#= form.file_field :photo_candidate %>
+      <%# if form.object.image? %>
+          <%#= image_tag form.object.image.thumb.url%>
+          <%#= form.label :remove_image %>
+          <%#= form.check_box :remove_image %>
+      <%# end %>
+    <!--</div>-->
+<!---->
+
+    <p class="Name_andidate form-group">
+      <%= form.label :photo_candidate, "Photo Candidate"  %><br>
+      <%= form.text_field :photo_candidate, class: 'form'%>
+    </p>
+
     <p class="Name_andidate form-group">
       <%= form.label :title, "Name Candidate"  %><br>
       <%= form.text_field :title, class: 'form'%>
+    </p>
 
+
+    <p class="field">
+      <%= form.label :birth_date , "Birth Date" %><br>
+      <%= form.text_field :birth_date, class: 'form'%>
     </p>
 
     <p class="field">
@@ -40,6 +59,7 @@
                                ['Other'], ['Perl'], ['PHP'], ['Python'], ['Ruby/Rails'], ['Scala'], ['SQL'], ['Swift']]) %>
     </p>
 
+
     <p class="expirience">
       <%= form.label :expirience, "Experience" %><br>
       <%#= form.text_area :expirience, class: 'form' %>
@@ -55,6 +75,26 @@
     <p class="status">
       <%= form.label :data, "Salary '$'" %><br>
       <%= form.text_area :data, class: 'form' %>
+    </p>
+
+    <p class="status">
+      <%= form.label :city, "City" %><br>
+      <%= form.text_area :city, class: 'form' %>
+    </p>
+
+    <p class="status">
+      <%= form.label :skype, "Skype" %><br>
+      <%= form.text_area :skype, class: 'form' %>
+    </p>
+
+    <p class="status">
+      <%= form.label :telephone, "Telephone" %><br>
+      <%= form.text_area :telephone, class: 'form' %>
+    </p>
+
+    <p class="status">
+      <%= form.label :eng_lev, "English Level" %><br>
+      <%= form.select(:eng_lev, [['Elementary'], ['Pre-intermediate'], ['Intermediate'], ['Upper-intermediate'], ['Perfection'], ['Native']]) %>
     </p>
 
     <p class="form-group">

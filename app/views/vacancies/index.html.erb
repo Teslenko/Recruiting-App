@@ -20,12 +20,14 @@
         <td><%= vacancy.summary %></td>
         <td><%= vacancy.description %></td>
         <td><%= vacancy.company %></td>
+        <td><%#= image_tag vacancy.image.thumb.url %></td>
         <td><%= link_to 'Show', vacancy, class: "btn btn-large btn-primary", type: "button"%></td>
         <td><%= link_to 'Edit', edit_vacancy_path(vacancy), class: "btn btn-large btn-primary", type: "button"%></td>
         <td><%= link_to 'Destroy', vacancy, class: "btn btn-large btn-primary", type: "button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 
     <% end %>
+
   </tbody>
 </table>
 

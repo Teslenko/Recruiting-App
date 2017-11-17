@@ -5,6 +5,7 @@ class VacanciesController < ApplicationController
   # GET /vacancies.json
   def index
     @vacancies = Vacancy.all
+    @pets = Pet.all
   end
 
   # GET /vacancies/1
@@ -15,6 +16,7 @@ class VacanciesController < ApplicationController
   # GET /vacancies/new
   def new
     @vacancy = Vacancy.new
+    @pets = Pet.new
   end
 
   # GET /vacancies/1/edit

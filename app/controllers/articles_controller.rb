@@ -51,9 +51,18 @@ class ArticlesController < ApplicationController
 
 
 
+  # def destroy
+  #
+  #   respond_to do |format|
+  #     format.html { redirect_to pets_url, notice: 'Pet was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
+
+
   def search
     @articles = Article.ransack(title_cont: params[:q]).result(distinct: true)
-    # @users= Article.ransack(:skills: params[:q]).result(distinct: true)
+
 
     respond_to do |format|
       format.html{}
@@ -118,7 +127,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :position, :skills, :expirience, :status, :data)
+    params.require(:article).permit(:title, :position, :skills, :expirience, :status, :data, :photo_candidate, :birth_date, :skype, :telephone, :city, :eng_lev)
   end
 
 end
