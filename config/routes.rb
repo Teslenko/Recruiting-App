@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-
+  # root 'article#index'
   resources :pets
   resources :vacancies
   devise_for :users do
@@ -26,13 +26,13 @@ Rails.application.routes.draw do
   get 'users/new'
   get '/about' => 'pages#about'
 
-  get :search, controller: :search
-
+  get :search2, controller: :search
+   get :search, controller: :articles
   # post :search, controller: :search
 
   get '/help' => 'pages#help'
   get '/contact'=> 'pages#contact'
-  root  'static_pages#home'
+  root  'pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   # get '/search'
 

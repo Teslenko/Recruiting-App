@@ -17,7 +17,7 @@ class SearchController < ApplicationController
 
   private
 
-  def search(&block)
+  def search2(&block)
     if params[:q]
       @article= yield if block_given?
 

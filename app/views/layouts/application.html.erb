@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Recruiter</title>
+    <title>
+      Recruiter
+    </title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
-
   <body>
-  <!--<div class="row">-->
       <div class="wrapper">
           <div class="wrapper2">
-
-
-
-
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <%= render 'layouts/header' %>
-
-
-  <header class="container">
-
-  <%= yield %>
-    <!--в этой строке мы можем разместить данныве которые будут показываться на всех страницах-->
-
-  </header>
-  <%= render 'layouts/footer', class: 'form' %>
+                <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p>
+                <%= render 'layouts/header' %>
+                <header class="container">
+                        <%= yield %>
+                      <!--в этой строке мы можем разместить данныве которые будут показываться на всех страницах-->
+                </header>
+                <%#= render 'layouts/footer', class: 'form' %>
           </div>
       </div>
   </body>
-
 </html>
