@@ -55,7 +55,11 @@ class VacanciesController < ApplicationController
 
   # DELETE /vacancies/1
   # DELETE /vacancies/1.json
+
   def destroy
+    # @vacancy = Vacancy.find(params[:id])
+
+    # redirect_to vacancies_path
     @vacancy.destroy
     respond_to do |format|
       format.html { redirect_to vacancies_url, notice: 'Vacancy was successfully destroyed.' }

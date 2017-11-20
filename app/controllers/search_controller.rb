@@ -5,9 +5,9 @@ class SearchController < ApplicationController
 
   def foos
     search do
-    #   Foo.where :description => params[:q]
+      # Foo.where :description => params[:q]
       Foo.where :name => params[:q]
-      Foo.where :position_2 => params[:q]
+      # Foo.where :position_2 => params[:q]
       # Foo.where :skills_2 => params[:q]
       # Foo.where :expirience_2 => params[:q]
       # Foo.where :company_2 => params[:q]
@@ -24,7 +24,7 @@ class SearchController < ApplicationController
     search do
       # Bar.where :description => params[:q]
       Bar.where :name => params[:q]
-      Bar.where :position_2 => params[:q]
+      # Bar.where :position_2 => params[:q]
       # Bar.where :skills_2 => params[:q]
       # Bar.where :expirience_2 => params[:q]
       # Bar.where :company_2 => params[:q]

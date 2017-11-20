@@ -106,17 +106,20 @@ textarea {
 .bodycenter{
   width: 100%;
   background-attachment: scroll;
+
 }
 
 .wrapper { //фото с левой сторроны в Боди
-
-  height: 210px;
-  background: url(http://www.ellucian.com/uploadedImages/Images/Software/recruiter.png);
+  //display: flex;
+  height: 400px;
+//width: auto;
+  background: url(http://freeiconbox.com/icon/256/23118.png);
   background-repeat: no-repeat;
   background-position: left top;
   //background-size: cover;
   border: 1px #FFFFFF solid;
 
+  //display: flex;
 
 }
 
@@ -230,6 +233,12 @@ footer a {
   padding: 15px;
   font-size: 15px;
 }
+
+footer a {
+  color: #e8fcff;
+  padding: 15px;
+  font-size: 15px;
+}
 footer small {
   float: left;
   margin-top: 2%;
@@ -247,18 +256,9 @@ footer ul li {
 }
 
 .page-wrap {
-  min-height: 120%;
-  /* equal to footer height */
-  margin-bottom: -150px;
-  //box-sizing: inherit;
-  display: block;
-}
-
-.page-wrap2 {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -10px;
-
+  margin-bottom: -140px;
 
 }
 
@@ -268,18 +268,14 @@ footer :after {
 }
 
 .footer, .push { /* .push must be the same height as footer */
-  height: 115px;
+  height: 100px;
 }
 
 .footer{              /* тут мы делаем футер статичным и привязываем его к полу */
   background: #b0bedc;
-  //position: fixed;
-  //box-sizing: inherit;
+  position: fixed;
   bottom: 0%;
-  width: 100%;
-  //padding: 30px 20px;
-  float: inherit;
-  position: absolute;
+  width: 100%
 }
 
 

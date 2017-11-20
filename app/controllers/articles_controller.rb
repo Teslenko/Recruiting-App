@@ -31,44 +31,13 @@ class ArticlesController < ApplicationController
       render 'edit'
     end
   end
+
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
     redirect_to articles_path
   end
 
-
-  # def destroy
-  #
-  #   respond_to do |format|
-  #     format.html { redirect_to pets_url, notice: 'Pet was successfully destroyed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
-
-  # def search
-  #   @articles = Article.ransack(title_cont: params[:q]).result(distinct: true)
-  #
-  #
-  #   respond_to do |format|
-  #     format.html{}
-  #     format.json{}
-  #   end
-  #
-  # end
-
-
-
-    # @article = Article.ransack(title: params[:q]).result(distinct: true)
-    # @article = Article.ransack(position: params[:q]).result(distinct: true)
-    # if term
-    #   where('name LIKE ?', "%#{term}%")
-    # else
-    #   all
-    # end
-    # @books = Book.ransack(title_cont: params[:q]).result(distinct: true)
-    # @locations = Location.ransack(name_cont: params[:q]).result(distinct: true)
-    # @genres = Genre.ransack(genre_name_cont: params[:q]).result(distinct: true)
   def authenticate_user!
     unless current_user
       if request.xhr?

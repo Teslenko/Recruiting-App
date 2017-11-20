@@ -39,6 +39,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+gem 'responders'
+
 gem 'ransack'
 
 gem 'mini_magick'
