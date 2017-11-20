@@ -33,7 +33,8 @@ Rails.application.routes.draw do
   get '/help' => 'pages#help'
   get '/contact'=> 'pages#contact'
 
-  root  'pages#home'
+  # root  'pages#home'
+  root  'pets#index'
 
   # match '/signup',  to: 'users#new',            via: 'get'
   # get '/search'
