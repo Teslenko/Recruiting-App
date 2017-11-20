@@ -25,8 +25,8 @@ class PetsController < ApplicationController
 
 
   def search
-    @pets = Pet.ransack(title_cont: params[:q]).result(distinct: true)
-
+    # @pets = Pet.ransack(position_2_cont: params[:q]).result(distinct: true)
+    @pets = Pet.ransack(company_2_cont: params[:q]).result(distinct: true)
     respond_to do |format|
       format.html{}
       format.json{}
