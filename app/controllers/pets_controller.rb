@@ -25,8 +25,18 @@ class PetsController < ApplicationController
 
 
   def search
+    # @pets = Pet.ransack(description_cont: params[:q]).result(distinct: true)  #то по чем он ищет
+    @pets = Pet.ransack(name_cont: params[:q]).result(distinct: true)
     # @pets = Pet.ransack(position_2_cont: params[:q]).result(distinct: true)
-    @pets = Pet.ransack(company_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(skills_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(expirience_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(company_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(salary_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(birth_date_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(skype_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(telephone_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(city_2_cont: params[:q]).result(distinct: true)
+    # @pets = Pet.ransack(eng_lev_2_cont: params[:q]).result(distinct: true)
     respond_to do |format|
       format.html{}
       format.json{}

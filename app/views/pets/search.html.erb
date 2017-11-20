@@ -22,9 +22,12 @@
       </h3>
   <% end %>
   <% @pets.each do |pet| %>
-      <!-- Title:  <%= pet.description %>  -->
-      <%= link_to pet.description, pets_path(pet) %>
-      <%#= link_to article.title, article_path(article) %>
+
+      <%= link_to pet.name+" "+pet.position_2, pets_path(pet), class: 'btn btn-primary' %> <!--показывает при окончании результата поиска-->
+
+  <%#= link_to article.title, article_path(article) %>
   <% end %>
 </div>
+<div class="ttt">
 <%= link_to 'Back', :back, class: 'btn btn-primary' %>
+</div>

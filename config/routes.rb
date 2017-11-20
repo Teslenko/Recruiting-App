@@ -44,7 +44,7 @@ Rails.application.routes.draw do
 
   match '/signup',  to: 'users#new',            via: 'get'
   # get '/search'
-  root 'pets#index'
+  # root 'pets#index'
   resources :articles do
     resources :comments
   end
