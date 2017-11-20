@@ -26,16 +26,18 @@ Rails.application.routes.draw do
   get 'users/new'
   get '/about' => 'pages#about'
 
-  get :search, controller: :search
+  get :search2, controller: :search
+  get :search, controller: :pets
+  # get :search, controller: :articles
 
   # post :search, controller: :search
 
   get '/help' => 'pages#help'
   get '/contact'=> 'pages#contact'
-  root  'static_pages#home'
+
   match '/signup',  to: 'users#new',            via: 'get'
   # get '/search'
-
+  root 'pets#index'
   resources :articles do
     resources :comments
   end

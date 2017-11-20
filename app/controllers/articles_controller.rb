@@ -49,8 +49,6 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-
-
   # def destroy
   #
   #   respond_to do |format|
@@ -59,17 +57,16 @@ class ArticlesController < ApplicationController
   #   end
   # end
 
-
-  def search
-    @articles = Article.ransack(title_cont: params[:q]).result(distinct: true)
-
-
-    respond_to do |format|
-      format.html{}
-      format.json{}
-    end
-
-  end
+  # def search
+  #   @articles = Article.ransack(title_cont: params[:q]).result(distinct: true)
+  #
+  #
+  #   respond_to do |format|
+  #     format.html{}
+  #     format.json{}
+  #   end
+  #
+  # end
 
     # @article = Article.ransack(title: params[:q]).result(distinct: true)
     # @article = Article.ransack(position: params[:q]).result(distinct: true)
@@ -113,7 +110,6 @@ class ArticlesController < ApplicationController
   end
 
   def home
-
   end
 
   def contact
@@ -121,9 +117,6 @@ class ArticlesController < ApplicationController
 
   def help
   end
-
-
-
 
   private
   def article_params

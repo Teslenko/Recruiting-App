@@ -1,0 +1,30 @@
+<% if params[:q].present? %>
+    <h1>
+      Search results for "<%= params[:q] %>"
+      <!-- Search Results for -->
+    </h1>
+<% else %>
+    <h1>
+      <%= t('search.please_type_something') %>
+      <!-- "Please, type anything" -->
+    </h1>
+<% end %>
+
+<div>
+  <% if @pets.present? %>
+      <h2>
+        Articles:
+      </h2>
+  <% else %>
+      <h3>
+        Nothing found by
+        "<%= params[:q] %>"
+      </h3>
+  <% end %>
+  <% @pets.each do |pet| %>
+      <!-- Title:  <%= pet.title %>  -->
+      <%= link_to pet.description, pets_path(pet) %>
+      <%#= link_to article.title, article_path(article) %>
+  <% end %>
+</div>
+<%= link_to 'Back', :back, class: 'btn btn-primary' %>

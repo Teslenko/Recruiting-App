@@ -5,25 +5,37 @@ class SearchController < ApplicationController
 
   def foos
     search do
+      Foo.where :description => params[:q]
+      Foo.where :description => params[:q]
       Foo.where :name => params[:q]
+      Foo.where :position_2 => params[:q]
+      Foo.where :skills_2 => params[:q]
+      Foo.where :expirience_2 => params[:q]
+      Foo.where :company_2 => params[:q]
+      Foo.where :salary_2 => params[:q]
+      Foo.where :birth_date_2 => params[:q]
+      Foo.where :skype_2 => params[:q]
+      Foo.where :telephone_2 => params[:q]
+      Foo.where :city_2 => params[:q]
+      Foo.where :eng_lev_2 => params[:q]
     end
   end
 
   def bars
     search do
-      Bar.where :title => params[:q]
+      Bar.where :description => params[:q]
     end
   end
 
   private
 
-  def search(&block)
+    def search2(&block)
     if params[:q]
-      @article= yield if block_given?
+      @pet= yield if block_given?
 
       respond_to do |format|
         format.html # resources.html.erb
-        format.json { render json: @article }
+        format.json { render json: @pet}
       end
     else
       redirect_to root_url, :notice => 'No search query was specified.'

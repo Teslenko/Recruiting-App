@@ -22,6 +22,20 @@ class PetsController < ApplicationController
   def edit
   end
 
+
+
+  def search
+    @pets = Pet.ransack(title_cont: params[:q]).result(distinct: true)
+
+    respond_to do |format|
+      format.html{}
+      format.json{}
+    end
+
+  end
+
+
+
   # POST /pets
   # POST /pets.json
   def create
