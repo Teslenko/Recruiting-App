@@ -23,26 +23,19 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'persons/profile', as: 'user_root'
   get 'pages/contact'
-  get 'users/new'
+  # get 'users/new'
   get '/about' => 'pages#about'
 
   get :search2, controller: :search
   get :search, controller: :pets
   # get :search, controller: :articles
 
-
-
-
-
-
   get '/help' => 'pages#help'
   get '/contact'=> 'pages#contact'
 
-
-
   root  'pages#home'
 
-  match '/signup',  to: 'users#new',            via: 'get'
+  # match '/signup',  to: 'users#new',            via: 'get'
   # get '/search'
   # root 'pets#index'
   resources :articles do

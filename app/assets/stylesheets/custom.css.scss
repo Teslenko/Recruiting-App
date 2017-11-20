@@ -247,9 +247,18 @@ footer ul li {
 }
 
 .page-wrap {
+  min-height: 120%;
+  /* equal to footer height */
+  margin-bottom: -150px;
+  //box-sizing: inherit;
+  display: block;
+}
+
+.page-wrap2 {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -140px;
+  margin-bottom: -10px;
+
 
 }
 
@@ -259,14 +268,18 @@ footer :after {
 }
 
 .footer, .push { /* .push must be the same height as footer */
-  height: 100px;
+  height: 115px;
 }
 
 .footer{              /* тут мы делаем футер статичным и привязываем его к полу */
   background: #b0bedc;
-  position: fixed;
+  //position: fixed;
+  //box-sizing: inherit;
   bottom: 0%;
-  width: 100%
+  width: 100%;
+  //padding: 30px 20px;
+  float: inherit;
+  position: absolute;
 }
 
 

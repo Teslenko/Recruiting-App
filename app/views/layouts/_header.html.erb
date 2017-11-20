@@ -18,12 +18,12 @@
           <%= link_to "Help", help_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
 
 
-          <% if user_signed_in? %>
-              <span>Здравствуйте, <%= current_user.email %></span>
-              <%= link_to 'LogOut', destroy_user_session_path, class: "btn btn-large btn-primary"  %>
-          <% else %>
-              <%= link_to 'Login', new_user_session_path, class: "btn btn-large btn-primary" %> or <%= link_to 'Sign in', new_user_registration_path, class: "btn btn-large btn-primary" %>
-          <% end %>
+          <%# if user_signed_in? %>
+              <!--<span>Здравствуйте, <%#= current_user.email %></span>-->
+              <%#= link_to 'LogOut', destroy_user_session_path, class: "btn btn-large btn-primary"  %>
+          <%# else %>
+              <%#= link_to 'Login', new_user_session_path, class: "btn btn-large btn-primary" %> <%#= link_to 'Sign in', new_user_registration_path, class: "btn btn-large btn-primary" %>
+          <%# end %>
 
           <%# <%= link_to "Sign in", "http://localhost:3000/signup", class: "btn btn-large btn-primary", id: "sign_in", type: "button"%>
       </p>
