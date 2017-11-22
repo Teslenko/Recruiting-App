@@ -9,12 +9,12 @@
 
     <div class="container">
 
-      <div class="p1"><%= link_to "Recruiting Application", "http://localhost:3000", id: "logo", type: "button" %></div>
+      <div class="p1"><%= link_to "Recruiting Application", pets_path, id: "logo", type: "button" %></div>
 
       <nav class="nav pull-right ">
         <p>
           <%= link_to "My Vacancies", vacancies_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
-          <%= link_to "Test", articles_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
+          <%#= link_to "Test", articles_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
           <%= link_to "Help", help_path, class: "btn btn-large btn-primary", id: "help_button", type: "button"%>
 
 

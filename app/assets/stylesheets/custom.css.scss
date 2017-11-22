@@ -42,6 +42,12 @@ body {
   background-attachment: scroll;
  }
 
+//.bodyimage{
+//  background: url(https://hsto.org/getpro/habr/post_images/f82/401/658/f824016586083d3be742e242ee6fcd9d.jpg);
+//  height: auto;
+//  width: auto;
+//}
+
     //About Page
 .container-about {
   text-align: center;
@@ -52,8 +58,8 @@ body {
   background-position: center;
   background-position: bottom;
   text-decoration: none;
-
 }
+
 .text-dangero{
   text-align: center;
   font-size: 1.5em;
@@ -113,7 +119,7 @@ textarea {
   //display: flex;
   height: 400px;
 //width: auto;
-  background: url(http://freeiconbox.com/icon/256/23118.png);
+//  background: url(http://freeiconbox.com/icon/256/23118.png);
   background-repeat: no-repeat;
   background-position: left top;
   //background-size: cover;
@@ -126,7 +132,7 @@ textarea {
 .wrapper2 {  //фото с правой сторроны в Боди
 
   height: 210px;
-  background: url(https://images.uptowork.net/_utw/media/recruiter-off.png);
+  //background: url(https://images.uptowork.net/_utw/media/recruiter-off.png);
   background-repeat: no-repeat;
   background-position: right top;
   //background-size: cover;
