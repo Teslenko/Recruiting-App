@@ -24,8 +24,8 @@ Things you may want to cover:
 * ...
 
 
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/Teslenko/Recruiting-App
-git push -u origin master
+*git init
+*git add README.md
+*git commit -m "first commit"
+*git remote add origin https://github.com/Teslenko/Recruiting-App
+*git push -u origin master
