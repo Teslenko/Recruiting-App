@@ -69,7 +69,7 @@ production:
         database: search2_dev
         pool: 5
         username: root
-        password: 1
+        password: 1234
         port: 5432
         host: localhost
 development:
