@@ -1,7 +1,7 @@
 <%= form_for @pet, html: { multipart: true } do |f| %>
     <% if @pet.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+          <h2><%= pluralize(@pet.errors.count, "error") %> prohibited this Candidate from being saved:</h2>
 
           <ul>
             <% @pet.errors.full_messages.each do |message| %>
@@ -34,10 +34,6 @@
         <%= f.text_field :birth_date_2, class: 'form'%>
       </p>
 
-    <div class="field">
-      <%= f.label :description, "Description" %><br>
-      <%= f.text_area :description %>
-    </div>
 
       <p class="field">
         <%= f.label :position_2, "Position" %><br>
@@ -95,6 +91,10 @@
         <%= f.select(:eng_lev_2, [['Elementary'], ['Pre-intermediate'], ['Intermediate'], ['Upper-intermediate'], ['Perfection'], ['Native']]) %>
       </p>
 
+    <div class="field">
+      <%= f.label :description, "The Additional information" %><br>
+      <%= f.text_area :description %>
+    </div>
 
 
 

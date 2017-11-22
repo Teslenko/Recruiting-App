@@ -28,7 +28,10 @@ Rails.application.routes.draw do
 
   get :search2, controller: :search
   get :search, controller: :pets
-  # get :search, controller: :articles
+
+  get :autocomplete, controller: :search
+  get :autocomplete, controller: :pets
+
 
   get '/help' => 'pages#help'
   get '/contact'=> 'pages#contact'

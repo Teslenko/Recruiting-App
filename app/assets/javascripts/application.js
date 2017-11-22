@@ -14,3 +14,23 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.easy-autocomplete
+
+//= require bootstrap-sprockets
+
+
+$(window).scroll(function() {
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+        $(".navbar-transparent").addClass("navbar-color");
+        $(".navbar-nav").addClass("navbar-nav-dark");
+        $(".logo_dark").show();
+        return $(".logo_light").hide();
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $(".navbar-transparent").removeClass("navbar-color");
+        $(".navbar-nav").removeClass("navbar-nav-dark");
+        $(".logo_light").show();
+        return $(".logo_dark").hide();
+    }
+});

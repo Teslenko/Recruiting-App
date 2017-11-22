@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  before_action :set_pet, only: [:show, :edit, :update, :destroy]
+  before_action :set_pet, only: [:show, :edit, :update, :destroy, :autocomplete]
 
   # GET /pets
   # GET /pets.json
@@ -23,6 +23,7 @@ class PetsController < ApplicationController
   end
 
 
+######################################################################
 
   def search
     # @pets = Pet.ransack(description_cont: params[:q]).result(distinct: true)  #то по чем он ищет
@@ -41,10 +42,22 @@ class PetsController < ApplicationController
       format.html{}
       format.json{}
     end
-
   end
+#######################################
 
+  def autocomplete
+    # byebug
+    @pets= Pet.ransack(name: params[:q]).result(distinct: true).limit(5)
 
+    # if user_signed_in?&&current_user.admin?
+    #   @users = User.ransack(email_cont: params[:q]).result(distinct: true).limit(5)
+    # end
+    respond_to do |format|
+      format.html{}
+      format.json {}
+    end
+  end
+#########################################################################
 
   # POST /pets
   # POST /pets.json
@@ -53,7 +66,7 @@ class PetsController < ApplicationController
 
     respond_to do |format|
       if @pet.save
-        format.html { redirect_to @pet, notice: 'Pet was successfully created.' }
+        format.html { redirect_to @pet, notice: 'Candidate was successfully created.' }
         format.json { render :show, status: :created, location: @pet }
       else
         format.html { render :new }
@@ -67,7 +80,7 @@ class PetsController < ApplicationController
   def update
     respond_to do |format|
       if @pet.update(pet_params)
-        format.html { redirect_to @pet, notice: 'Pet was successfully updated.' }
+        format.html { redirect_to @pet, notice: 'Candidate was successfully updated.' }
         format.json { render :show, status: :ok, location: @pet }
       else
         format.html { render :edit }
@@ -81,7 +94,7 @@ class PetsController < ApplicationController
   def destroy
     @pet.destroy
     respond_to do |format|
-      format.html { redirect_to pets_url, notice: 'Pet was successfully destroyed.' }
+      format.html { redirect_to pets_url, notice: 'Candidate was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

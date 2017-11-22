@@ -70,5 +70,8 @@ production:
         pool: 5
         username: root
         password: 1
-
-
+        port: 5432
+        host: localhost
+development:
+   <<: *default
+   url: <%= ENV['DATABASE_URL'] %>

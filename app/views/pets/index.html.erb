@@ -26,8 +26,8 @@
   <style>
     .toggler { width: 10px; height: 2px; }
     #button { padding: .5em 5em; text-decoration: none; }
-    #effect { width: 1136px; height: 00px; padding: 0.4em; position: relative; }
-    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+    #effect { width: 1136px; height: auto; padding: 0.4em; position: relative; color: #477c99;}
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center;  }
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -55,7 +55,7 @@
           function callback() {
               setTimeout(function() {
                   $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
-              }, 3000 ); // сколько секунд будет ждать открытой
+              }, 3500 ); // сколько секунд будет ждать открытой
           };
 
           // Set effect from select menu value
@@ -158,5 +158,7 @@
 
 
 </table>
+
+
 
 <%#= link_to 'New Pet', new_pet_path, class: "btn btn-mini btn-primary", type: "button"  %>
