@@ -16,11 +16,5 @@ production:
 
         adapter: postgresql
         encoding: unicode
-        database: search2_dev
-        pool: 5
-        username: root
-        password: 1234
-      #  port: 5432
-        host: localhost
         url: <%= ENV['DATABASE_URL'] %>
 
