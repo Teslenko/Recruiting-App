@@ -213,18 +213,17 @@ footer {
 
 .myplaning{
   float: right;
-  padding: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0.5%;
 }
 
 .Tesl{
   float: right;
-  padding: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0.5%;
+}
+
+.railstutorial{
+  float: left;
+  margin-top: 0%;
 }
 
 
@@ -236,8 +235,8 @@ footer a {
 
 footer a {
   color: #e8fcff;
-  padding: 15px;
-  font-size: 15px;
+  padding: 20px;
+  font-size: 17px;
 }
 footer small {
   float: left;
@@ -252,7 +251,7 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 50px;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 
 .page-wrap {
@@ -268,7 +267,7 @@ footer :after {
 }
 
 .footer, .push { /* .push must be the same height as footer */
-  height: 100px;
+  height: 90px;
 }
 
 .footer{              /* тут мы делаем футер статичным и привязываем его к полу */

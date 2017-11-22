@@ -47,7 +47,7 @@ class PetsController < ApplicationController
 
   def autocomplete
     # byebug
-    @pets= Pet.ransack(name: params[:q]).result(distinct: true).limit(5)
+    @pets= Pet.ransack(name_cont: params[:q]).result(distinct: true).limit(5)
 
     # if user_signed_in?&&current_user.admin?
     #   @users = User.ransack(email_cont: params[:q]).result(distinct: true).limit(5)

@@ -13,23 +13,8 @@ document.addEventListener("turbolinks:load",function(){
                     listLocation: "pets",
                     header: "<strong>Names</strong>",
                 }
-                // {
-                //     listLocation: "books",
-                //     header: "--Books--",
-                // },
-                // {
-                //     listLocation: "genres",
-                //     header: "--Genres--",
-                // },
-                // {
-                //     listLocation: "locations",
-                //     header: "--Locations--",
-                // },
-                // {
-                //     listLocation: "users",
-                //     header: "--Users--",
-                // },
-            ],
+
+            ], theme: "dark",
             list: 	{
                 onChooseEvent: function()
                 {
@@ -40,7 +25,7 @@ document.addEventListener("turbolinks:load",function(){
                 }
             }
         }
-        $input.easyAutocomplete(options)
+        $input('#theme').easyAutocomplete(options)
 
     }
 );

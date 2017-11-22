@@ -1,19 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Booksget</title>
+  <%= csrf_meta_tags %>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%#= favicon_link_tag 'favicon.ico' %>
+</head>
+<body>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing All Candidate</h1>
-
-
-
+<!--<h1>Listing All Candidate</h1>-->
 <!--//-------------------------------Search---------------------------------------->
 <div class="container search_margin_top">
   <%= label_tag(:q, "Search for:") %>
   <%= form_with url: search_path, local: true, method: :get do |form| %>
-      <%= form.text_field :q, :size =>"50", placeholder: "Search yours Candidate", data:{behavior: "autocomplete"}, class: "form-control width_of_search" %>
+      <%= form.text_field :q, :size =>"40", placeholder: "Search yours Candidate", data:{behavior: "autocomplete"}, class: "form-control width_of_search" %>
       <div class="ttt">
       <%= form.button "Search", class: "btn btn-large btn-primary" %>
       </div>
   <% end %>
 </div>
+<br>
 
 <!--//-------------------------------Your active Vacancies---------------------------------------->
 <html lang="en">
@@ -162,3 +172,6 @@
 
 
 <%#= link_to 'New Pet', new_pet_path, class: "btn btn-mini btn-primary", type: "button"  %>
+
+</body>
+</html>

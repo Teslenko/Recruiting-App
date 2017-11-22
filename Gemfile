@@ -11,7 +11,7 @@ gem 'rails', '~> 5.1.4'
 
 gem 'bcrypt','~> 3.1.7'
 
-gem "paperclip"#, "~> 5.1"
+gem 'paperclip'#, "~> 5.1"
 
 gem 'image_magick'
 
