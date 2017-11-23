@@ -19,15 +19,17 @@
     <% end %>
 
 
-    <div class="field">
+    <div class="actions">
+      <br>
       <%= f.label :image, "Avatar"%><br>
+      <button class="favth-btn">
       <%= f.file_field :image, class: "btn btn-large btn-primary" %>
       <% if f.object.image? %>
           <%= image_tag f.object.image.thumb.url %>
           <%= f.label :remove_image %>
           <%= f.check_box :remove_image %>
       <% end %>
-
+        </button >
     </div>
 
 
