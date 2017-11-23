@@ -18,11 +18,11 @@
 <div class="col-xs-8">
   <tr><div class="container" >
     <div class="row">
-      <th>Photo</th>
+      <th></th>
       <th>Name Candidate</th>
       <th>Position</th>
       <th>Company</th>
-      <th colspan="3"></th></div></div>
+      <th colspan="3"></th><br></div></div>
   </tr>
 </div>
 </thead>
@@ -33,21 +33,23 @@
       Lits Finded Candidates
     </h2>
 <% else %>
-    <h3>
+    <tr> <h3>
       Nothing found by
       "<%= params[:q] %>"
     </h3>
 <% end %>
 <% @pets.each do |pet| %>
     <td><%= image_tag pet.image.thumb.url %></td>
-    <td><%= link_to pet.name, pet_path(pet), class: 'btn btn-primary' %></td> <!--показывает при окончании результата поиска-->
-    <td><%= link_to pet.position_2, pet_path(pet), class: 'btn btn-primary' %></td>
-    <td><%= link_to pet.company_2, pet_path(pet), class: 'btn btn-primary' %></td>
+    <td class="Show"><button class="favth-btn"><%= link_to 'Show', pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+    <td class="edit"><button class="favth-btn"><%= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-warning", type: "button" %></button></td>
+    <td class="destroy"><button class="favth-btn"><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger", type: "button" %></button></td>
+      </tr>
 <% end %>
-</tbody>
+</tbody>    <br>
 
 
-<br>
+
+  <br>
 
 
 </table>

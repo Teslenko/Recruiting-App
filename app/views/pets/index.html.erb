@@ -1,33 +1,15 @@
 <!DOCTYPE html>
-
 <head>
-  <title>Booksget</title>
+
+
   <%= csrf_meta_tags %>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%#= favicon_link_tag 'favicon.ico' %>
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-<p id="notice"><%= notice %></p>
 
-<!--<h1>Listing All Candidate</h1>-->
-<!--//-------------------------------Search---------------------------------------->
-<div class="container search_margin_top">
-  <%= label_tag(:q, "Search for:") %>
-  <%= form_with url: search_path, local: true, method: :get do |form| %>
-      <%= form.text_field :q, :size =>"40", placeholder: "Search yours Candidate", data:{behavior: "autocomplete"}, class: "form-control width_of_search" %>
-      <div class="ttt">
-      <%= form.button "Search", class: "btn btn-large btn-primary" %>
-      </div>
-  <% end %>
-</div>
-<br>
 
-<!--//-------------------------------Your active Vacancies---------------------------------------->
-<html lang="en">
-<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>jQuery UI Effects - Show Demo</title>
@@ -77,9 +59,30 @@
       } );
   </script>
 </head>
-<body>
-<!--//-------------Your active Vacancies-------------------->
-<!--<h3 class="">Your active Vacancies</h3>-->
+
+
+
+<p id="notice"><%= notice %></p>
+
+<!--<h1>Listing All Candidate</h1>-->
+<!--//-------------------------------Search---------------------------------------->
+<div class="container search_margin_top">
+  <%= label_tag(:q, "Search for:") %>
+  <%= form_with url: search_path, local: true, method: :get do |form| %>
+      <%= form.text_field :q, :size =>"40", placeholder: "Search yours Candidate", data:{behavior: "autocomplete"}, class: "form-control width_of_search" %>
+      <div class="ttt">
+        <%= form.button "Search", class: "btn btn-large btn-primary" %>
+      </div>
+  <% end %>
+</div>
+<br>
+
+<!--//-------------------------------Your active Vacancies---------------------------------------->
+
+
+<body class="">
+<!--//-------------Your active Vacancies class="favth-btn glyphicon glyphicon-ok"-------------------->
+<h1 class="">Listing All Candidates</h1>
 
 <div class="toggler">
   <div id="effect" class="ui-widget-content ui-corner-all">
@@ -89,7 +92,7 @@
 
       <div class="col-xs-8">
         <tr>
-          <div class="container" >
+          <div class="container glyphicon glyphicon-film" >
             <div class="row">
               <th>Summary</th>
               <th>Description</th>
@@ -108,8 +111,8 @@
               <td><%= vacancy.description %></td>
               <td><%= vacancy.company %></td>
             </tr>
-            <td><%= link_to 'Show', vacancy, class: "btn btn-large btn-primary", type: "button"%></td>
-            <td><%= link_to 'Destroy', vacancy, class: "btn btn-large btn-primary", type: "button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td class="Show"><button class="favth-btn"><%= link_to 'Show', vacancy, class: "btn btn-large btn-primary", type: "button"%></button></td>
+            <td class="destroy"><button class="favth-btn"><%= link_to 'Destroy', vacancy, class: "btn btn-large btn-danger", type: "button", method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
         <% end %>
       </div>
       </tbody>
@@ -135,38 +138,36 @@
   </label>
 </div>
 
-<table class="table table-striped container">
+<table id="example"  class="table display responsive nowrap" style="width:100%">
   <thead>
   <div class="col-xs-8">
     <tr><div class="container" >
       <div class="row">
-      <th>Photo</th>
-      <th>Name Candidate</th>
+        <th></th>
+        <th>Name Candidate</th>
         <th>Position</th>
         <th>Company</th>
-      <th colspan="3"></th></div></div>
+        <th colspan="3"></th></div></div>
     </tr>
   </div>
   </thead>
 
   <tbody>
-    <% @pets.each do |pet| %>
+  <% @pets.each do |pet| %>
       <tr>
-        <td><%= image_tag pet.image.thumb.url %></td>
+        <% if pet.image.present? %>
+            <td><%= image_tag pet.image.thumb.url %></td>
+        <% end %>
         <td><%= pet.name %></td>
         <td><%= pet.position_2 %></td>
         <td><%= pet.company_2 %></td>
-        <td><%= link_to 'Show', pet, class: "btn btn-mini btn-primary", type: "button" %></td>
-        <td><%= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-primary", type: "button" %></td>
-        <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-primary", type: "button" %></td>
+        <td class="Show"><button class="favth-btn "><%= link_to 'Show', pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+        <td class="edit"><button class="favth-btn"><%= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-warning", type: "button" %></button></td>
+        <td class="destroy"><button class="favth-btn"><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger", type: "button" %></button></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
-
-
-<br>
-
-
+  <br>
 </table>
 
 
@@ -175,3 +176,4 @@
 
 </body>
 </html>
+

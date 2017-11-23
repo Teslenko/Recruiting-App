@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head >
+    <link rel="shortcut icon" href="https://icons8.ru" type="image/x-icon" width="48" height="48" >
+
+
     <title>
       Recruiter
     </title>
@@ -9,8 +12,11 @@
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'logo_image.ico' %> <!--тут лежить логотип для страницы для вкладки-->
+
   </head>
   <body>
+  <%#= image_tag("icons8-Контакты-48.png", size: "50x40",:alt => "Recruiter", id:'recruiter_logo') %>
       <div class="wrapper">
           <div class="wrapper2">
                 <p class="notice"><%= notice %></p>
