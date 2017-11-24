@@ -1,26 +1,47 @@
-<div class="input-group-addon">
+<head>
+  <style>
+    #Show_page_Name{
+      width: 55%;
+    }
+    table{
+      width: 500px;
+      height: 70px;
+      text-align: center;
+      overflow: scroll;
+      overflow: auto; padding: 40px;
+    }
 
+      .column_vacansion{
+        width: 1305px;
+      }
+  </style>
+</head>
+<h1>Description Vacancy</h1>
+ <br>
+<div class="">
+    <div id="error_explanation2">
+      <table id="example"   cellspacing="10"   class="table table-bordered table-striped fixedtable" >
 
-<p id="notice"><%= notice %></p>
+        <tr>
+          <td id="Show_page_Name" class="column_vacansion" ><strong>Summary:</strong></td><td id="Show_page_Name" ><%= @vacancy.summary %></td>
+        </tr>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @vacancy.summary %>
-</p>
+        <tr>
+          <td id="Show_page_Name" style="padding: 20px" ><strong>Description:</strong></td><td id="Show_page_Name" ><%= @vacancy.description %></td>
+        </tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @vacancy.description %>
-</p>
+        <tr>
+          <td id="Show_page_Birth Date:" ><strong>Company:</strong></td><td id="Show_page_Name" ><%= @vacancy.company %></td>
+        </tr>
 
-<p>
-  <strong>Company:</strong>
-  <%= @vacancy.company %>
-</p>
-
+      </table>
+    </div>
   </div>
-
-<div class="ttt">
-  <%= link_to 'Edit', edit_vacancy_path(@vacancy), class: "btn btn-large btn-primary", type: "button" %> |
-<%= link_to 'Back', vacancies_path, class: "btn btn-large btn-primary", type: "button" %>
+<div class="ttt button_vacansies">
+  <%= link_to 'Edit', edit_vacancy_path(@vacancy), class: "btn btn-large btn-primary" %> |
+  <%= link_to 'Back', vacancies_path, class: "btn btn-large btn-primary"%>
 </div>
+
+</div>
+
+

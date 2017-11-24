@@ -30,6 +30,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+  process resize_to_fit: [800, 800]
+
   version :thumb do
     process resize_to_fit: [150, 150]
   end
@@ -40,6 +42,9 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
+  def content_type_whitelist
+    /image\//
+  end
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   # def filename

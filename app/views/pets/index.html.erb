@@ -58,6 +58,21 @@
           $( "#effect" ).hide();
       } );
   </script>
+
+  <style type="text/css">
+
+    #Home_page_Title{
+      text-align: center;
+    }
+
+    #Home_page_Name_Pos_Comp{
+      text-align: center;
+      padding: 20px; /* Поля вокруг содержимого ячеек */
+    }
+
+  </style>
+
+
 </head>
 
 
@@ -82,7 +97,7 @@
 
 <body class="">
 <!--//-------------Your active Vacancies class="favth-btn glyphicon glyphicon-ok"-------------------->
-<h1 class="">Listing All Candidates</h1>
+<h1 class="title">Listing All Candidates</h1>
 
 <div class="toggler">
   <div id="effect" class="ui-widget-content ui-corner-all">
@@ -138,39 +153,39 @@
   </label>
 </div>
 
-<table id="example"  class="table display responsive nowrap" style="width:100%">
-  <thead>
-  <div class="col-xs-8">
-    <tr><div class="container" >
-      <div class="row">
-        <th></th>
-        <th>Name Candidate</th>
-        <th>Position</th>
-        <th>Company</th>
-        <th colspan="3"></th></div></div>
-    </tr>
-  </div>
-  </thead>
 
+
+<div class="">
+
+    <table id="example"  class="table  table-striped fixedtable" style="width:100%">
+      <thead>
+          <tr>
+            <th></th>
+            <th id="Home_page_Title" >Name Candidate</th>
+            <th id="Home_page_Title">Position</th>
+            <th id="Home_page_Title">Company</th>
+            <th colspan="3" id="Home_page_Title">Action</th>
+          </tr>
+      </thead>
   <tbody>
-  <% @pets.each do |pet| %>
+    <% @pets.each do |pet| %>
       <tr>
         <% if pet.image.present? %>
-            <td><%= image_tag pet.image.thumb.url %></td>
+            <td id="Home_page_Avatar"><%= image_tag pet.image.thumb.url %></td>
         <% end %>
-        <td><%= pet.name %></td>
-        <td><%= pet.position_2 %></td>
-        <td><%= pet.company_2 %></td>
-        <td class="Show"><button class="favth-btn "><%= link_to 'Show', pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
-        <td class="edit"><button class="favth-btn"><%= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-warning", type: "button" %></button></td>
-        <td class="destroy"><button class="favth-btn"><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger", type: "button" %></button></td>
+          <td id="Home_page_Name_Pos_Comp" width="auto"><%= pet.name %></td>
+          <td id="Home_page_Name_Pos_Comp"><%= pet.position_2 %></td>
+          <td id="Home_page_Name_Pos_Comp"><%= pet.company_2 %></td>
+          <td id="Home_page_Title" class="Show" ><button class="favth-btn "><%= link_to 'Show', pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+          <td  id="Home_page_Title" class="edit"><button class="favth-btn"><%= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-warning", type: "button" %></button></td>
+          <td id="Home_page_Title" class="destroy"><button class="favth-btn"><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger", type: "button" %></button></td>
       </tr>
-  <% end %>
+    <% end %>
   </tbody>
-  <br>
-</table>
+      <br>
+    </table>
 
-
+</div>
 
 <%#= link_to 'New Pet', new_pet_path, class: "btn btn-mini btn-primary", type: "button"  %>
 

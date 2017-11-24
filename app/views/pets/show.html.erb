@@ -1,83 +1,94 @@
+<head>
+<style>
+#Show_page_Name{
+    width: 55%;
+  }
+  table{
+    width: 500px;
+    height: 70px;
+    text-align: center;
+    overflow: scroll;
+    overflow: auto; padding: 40px;
+
+  }
+
+  #Show_page_Image{
+
+    text-align: center;
+  }
+</style>
+</head>
+
+
+<body class="">
+
+<h1>Description the Candidate</h1>
+<br>
+
 <div class="input-group-addon">
   <div id="error_explanation2">
+    <table id="example"   cellspacing="10"  border="2" class="table table-bordered table-striped fixedtable" >
+
+
+      <tr>
+        <th  id="Show_page_Image" colspan="2"> <%= image_tag @pet.image.thumb.url %></th>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Name" ><strong>Name:</strong></td><td id="Show_page_Name" ><%= @pet.name %></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Birth Date:" ><strong>Birth Date:</strong></td><td id="Show_page_Name" > <%= @pet.birth_date_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Name:" ><strong>The Additional information</strong></td><td id="Show_page_Name" ><%= @pet.description %></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Birth Date:" ><strong>Position:</strong></td><td id="Show_page_Name" ><%= @pet.position_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_The_Additional_information" ><strong>Skills:</strong></td><td id="Show_page_Name" ><%= @pet.skills_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Position:" ><strong>Expirience:</strong></td><td id="Show_page_Name" ><%= @pet.expirience_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Skills:" ><strong>Company:</strong></td><td id="Show_page_Name" > <%= @pet.company_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Expirience:" ><strong>Salary'$':</strong></td><td id="Show_page_Name" ><%= @pet.salary_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Company:" ><strong>City:</strong></td><td id="Show_page_Name" ><%= @pet.city_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Salary'$':" ><strong>Skype:</strong></td><td id="Show_page_Name" ><%= @pet.skype_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Telephone:" ><strong>Telephone:</strong></td><td id="Show_page_Name" ><%= @pet.telephone_2%></td>
+      </tr>
+
+      <tr>
+        <td id="English Level:"><strong>English Level:</strong></td><td id="Show_page_Name" ><%= @pet.eng_lev_2%></td>
+      </tr>
+
+    </table>
   </div>
-<p id="notice"><%= notice %></p>
-
-
-  <p>
-    <strong>Image:</strong>
-    <%#= @pet.image %>
-    <%= image_tag @pet.image.thumb.url %>
-  </p>
-
-  <p>
-  <strong>Name:</strong>
-  <%= @pet.name %>
-</p>
-
-  <p >
-    <strong>Birth Date:</strong>
-    <%= @pet.birth_date_2%>
-  </p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @pet.description %>
-</p>
-
-
-  <p >
-    <strong>Position:</strong>
-    <%= @pet.position_2%>
-  </p>
-
-  <p >
-    <strong>Skills:</strong>
-    <%= @pet.skills_2%>
-  </p>
-
-  <p >
-    <strong>Expirience:</strong>
-    <%= @pet.expirience_2%>
-  </p>
-
-  <p >
-    <strong>Company:</strong>
-    <%= @pet.company_2%>
-  </p>
-
-
-  <p >
-    <strong>Salary'$':</strong>
-    <%= @pet.salary_2%>
-  </p>
-
-
-  <p >
-    <strong>City:</strong>
-    <%= @pet.city_2%>
-  </p>
-
-  <p >
-    <strong>Skype:</strong>
-    <%= @pet.skype_2%>
-  </p>
-
-
-  <p >
-    <strong>Telephone:</strong>
-    <%= @pet.telephone_2%>
-  </p>
-
-  <p >
-    <strong>English Level:</strong>
-    <%= @pet.eng_lev_2%>
-  </p>
-
-
-  </div>
-
-<div class="ttt">
-<%= link_to 'Edit', edit_pet_path(@pet), class: "btn btn-large btn-primary" %> |
-<%= link_to 'Back', pets_path, class: "btn btn-large btn-primary" %>
 </div>
+
+<div class="ttt" >
+  <%= link_to 'Edit', edit_pet_path(@pet), class: "btn btn-large btn-primary" %> |
+  <%= link_to 'Back', pets_path, class: "btn btn-large btn-primary" %>
+</div>
+
+</body >
