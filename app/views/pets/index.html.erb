@@ -174,7 +174,11 @@
             <td id="Home_page_Avatar"><%= image_tag pet.image.thumb.url %></td>
         <% end %>
           <td id="Home_page_Name_Pos_Comp" width="auto"><%= pet.name %></td>
+<<<<<<< HEAD
           <td id="Home_page_Name_Pos_Comp"><%= pet.city_2 %></td>
+=======
+          <td id="Home_page_Name_Pos_Comp"><%= pet.position_2 %></td>
+>>>>>>> 7181f35468104459de97c6993161d1f17896ec28
           <td id="Home_page_Name_Pos_Comp"><%= pet.company_2 %></td>
           <td id="Home_page_Title" class="Show" ><button class="favth-btn "><%= link_to 'Show', pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
           <td  id="Home_page_Title" class="edit"><button class="favth-btn"><%= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-warning", type: "button" %></button></td>

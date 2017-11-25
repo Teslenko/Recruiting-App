@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20171117175400) do
     t.text "eng_lev"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "avatars", force: :cascade do |t|
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> 7181f35468104459de97c6993161d1f17896ec28
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
