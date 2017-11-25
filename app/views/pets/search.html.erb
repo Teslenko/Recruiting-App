@@ -1,0 +1,96 @@
+<head>
+  <style type="text/css">
+
+    #Home_page_Title{
+      text-align: center;
+    }
+
+    #Home_page_Name_Pos_Comp{
+      text-align: center;
+      padding: 10px; /* Поля вокруг содержимого ячеек */
+      word-wrap:break-word
+
+    }
+    table {
+      width: auto !important;
+
+    }
+    td {
+    ;
+    }
+
+    h3 {
+      font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
+      font-size: 150%; /* Размер текста */
+      font-weight: lighter; /* Светлое начертание */
+    }
+
+  </style>
+</head>
+<body>
+<div style=" background-position: left">
+
+
+<% if params[:q].present? %>
+
+      <div style="    position: absolute; color: #589933"> <h3>
+      Search results for "<%= params[:q] %>"
+      <!-- Search Results for -->
+    </h3></div>
+
+  <% else %>
+    <h1>
+      <%= t('search.please_type_something') %>
+      <!-- "Please, type anything" -->
+    </h1>
+<% end %>
+
+<br>
+
+
+<table class="table table-striped container" style="text-align: center; padding: 25px">
+<thead>
+<div class="col-xs-8">
+  <tr><div class="container" >
+    <div class="row">
+      <th></th>
+      <th style="text-align: center; " >Name Candidate</th>
+      <th style="text-align: center">Position</th>
+      <th style="text-align: center">Company</th>
+      <th style="text-align: center"></th><br></div></div>
+  </tr>
+</div>
+</thead>
+
+<tbody>
+<% if @pets.present? %>
+    <h2>
+      Lits Finded Candidates
+    </h2>
+<% else %>
+    <tr> <h3>
+      Nothing found by
+      "<%= params[:q] %>"
+    </h3>
+<% end %>
+<% @pets.each do |pet| %>
+    <td><%= image_tag pet.image.thumb.url %></td>
+    <td class="Show" style="padding: 25px"><button class="favth-btn " ><%= link_to pet.name, pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+    <td class="Show" style="padding: 25px"><button class="favth-btn"><%= link_to pet.position_2, pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+    <td class="Show" style="padding: 25px"><button class="favth-btn"><%= link_to pet.company_2, pet, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+    <!--<td class="edit"><button class="favth-btn"><%#= link_to 'Edit', edit_pet_path(pet), class: "btn btn-mini btn-warning", type: "button" %></button></td>-->
+    <!--<td class="destroy"><button class="favth-btn"><%#= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger", type: "button" %></button></td>-->
+      </tr>
+<% end %>
+</tbody>    <br>
+
+
+
+  <br>
+
+
+</table>
+<div class="ttt">
+  <%= link_to 'Back', :back, class: 'btn btn-primary' %>
+</div>
+</body>

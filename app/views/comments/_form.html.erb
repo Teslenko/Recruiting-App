@@ -1,0 +1,13 @@
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+    <p>
+      <%= form.label :Title %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :description %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit :"Create Note", class: 'btn btn-large btn-primary' %>
+    </p>
+<% end %>

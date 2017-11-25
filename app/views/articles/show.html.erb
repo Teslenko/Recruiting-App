@@ -1,0 +1,93 @@
+
+<div class="input-group-addon">
+  <div id="error_explanation2">
+
+
+
+  <p class="Name_andidate">
+
+    <p >
+      <strong>Photo Candidate:</strong>
+      <%#= image_tag @article.image.thumb.url %>
+    </p>
+
+    <strong>Name Candidate:</strong>
+    <%= @article.title %>
+  </p>
+
+   </div>
+
+  <!--<p >-->
+    <!--<strong>Position:</strong>-->
+  <%#=  @article.image.thumb.url %>
+  <!--</p>-->
+
+  <p >
+    <strong>Birth Date:</strong>
+    <%= @article.birth_date%>
+  </p>
+
+
+  <p >
+    <strong>Position:</strong>
+    <%= @article.position%>
+  </p>
+
+  <p >
+    <strong>Skills:</strong>
+    <%= @article.skills%>
+  </p>
+
+  <p >
+    <strong>Expirience:</strong>
+    <%= @article.expirience%>
+  </p>
+
+  <p >
+    <strong>Company:</strong>
+    <%= @article.status%>
+  </p>
+
+
+  <p >
+    <strong>Salary'$':</strong>
+    <%= @article.data%>
+  </p>
+
+
+  <p >
+    <strong>City:</strong>
+    <%= @article.city%>
+  </p>
+
+  <p >
+    <strong>Skype:</strong>
+    <%= @article.skype%>
+  </p>
+
+
+  <p >
+    <strong>Telephone:</strong>
+    <%= @article.telephone%>
+  </p>
+
+  <p >
+    <strong>English Level:</strong>
+    <%= @article.eng_lev%>
+  </p>
+
+
+
+</div>
+
+<div class="input-group-addon">
+<h2>Notes</h2>
+<%= render @article.comments %>
+
+<h2>Add a notes:</h2>
+<%= render 'comments/form' %>
+
+
+<%= link_to 'Edit Person', edit_article_path(@article), class: "btn btn-large btn-primary" %> |
+<%= link_to 'Back to Home', articles_path, class: "btn btn-large btn-primary" %>
+</div>

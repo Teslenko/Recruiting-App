@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<%= form_for @pet, html: { multipart: true } do |f| %>
+    <% if @pet.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@pet.errors.count, "error") %> prohibited this Candidate from being saved:</h2>
+
+          <ul>
+            <% @pet.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+    <div class="actions">
+      <br>
+      <%= f.label :image, "Avatar"%><br>
+      <button class="favth-btn">
+      <%= f.file_field :image, class: "btn btn-large btn-primary" %>
+      <% if f.object.image? %>
+          <%= image_tag f.object.image.thumb.url %>
+
+          <%= f.label :remove_image %>
+          <%= f.check_box :remove_image %>
+      <% end %>
+        </button >
+    </div>
+
+
+    <div class="name_candidate", required>
+      <%= f.label :name, "Name Candidate" %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <br>
+      <p class="level">
+        <%= f.label :position_2, "Level", class: 'form'%><br>
+        <%#= f.text_area :position_2, class: 'form'%>
+        <%= f.select(:position_2, [['Trainee'], ['Junior'], ['Strong-Junior'], ['Middle'], ['Strong-Middle'], ['Senior']]) %>
+
+                      <!--[['Junior Software Engineer'], ['Software Engineer'], ['Senior Software Engineer'], ['Technical Lead'], ['System Architect'],-->
+                                     <!--['Team lead'], ['Project manager'], ['Senior Project Manager / Program Manager'], ['Director of Engineering / Program Director'],-->
+                                     <!--['Junior QA engineer'], ['QA Engineer'], ['Senior QA engineer'], ['QA Tech Lead'],-->
+                                     <!--['Business analyst'], ['Data Scientist / Data Analyst'], ['DBA'], ['Designer'], ['DevOps'],-->
+                                     <!--['ERP / CRM'], ['Game designer'], ['HR'], ['HTML Coder'], ['Marketing'], ['Research Engineer'], ['Sales manager'],-->
+                                    <!--['Scrum Master'], ['Security Specialist'], ['Support'], ['Sysadmin'], ['Talent Researcher'], ['Technical writer']]) %>-->
+      </p>
+
+      <p class="position">
+      <%= f.label :city_2, "Position" %><br>
+      <%= f.text_area :city_2, class: 'form' %>
+      </p>
+
+      <p class="Skills">
+        <%= f.label :skills_2, "Skills" %><br>
+        <%#= form.text_area :skills, class: 'form'%>
+        <%= f.select(:skills_2, [['1С'], ['ABAP'], ['APL'], ['C'], ['C#/.NET'], ['C++'], ['Delphi'], ['Erlang'],
+                                  ['Flex/Flash/AIR'], ['Golang'], ['Haskell'], ['Human Resources'], ['Java'], ['JavaScript'], ['Objective-C'],
+                                  ['Other'], ['Perl'], ['PHP'], ['Python'], ['Ruby/Rails'], ['Scala'], ['SQL'], ['Swift']]) %>
+      </p>
+
+      <p class="expirience">
+        <%= f.label :expirience_2, "Experience" %><br>
+        <%#= form.text_area :expirience, class: 'form' %>
+        <%= f.select(:expirience_2, [['0.5 years'], ['1 years'], ['2 years'], ['3-5 years'], ['5-7 years'], ['8-10 years'], [' 10+ years'], ['15+ years'],
+                                      ['20+ years']]) %>
+      </p>
+
+      <p class="company">
+        <%= f.label :company_2, "Company" %><br>
+        <%= f.text_area :company_2, class: 'form' %>
+      </p>
+
+      <p class="salary">
+        <%= f.label :salary_2, "Salary '$'"%><br>
+        <%= f.text_area :salary_2, class: 'form' %>
+      </p>
+
+
+      <p class="status">
+        <%= f.label :skype_2, "Skype" %><br>
+        <%= f.text_area :skype_2, class: 'form' %>
+      </p>
+
+      <p class="telephone">
+        <%= f.label :telephone_2, "Telephone" %><br>
+        <%= f.text_area :telephone_2, class: 'form' %>
+      </p>
+
+      <p class="eng">
+        <%= f.label :eng_lev_2, "English Level" %><br>
+        <%= f.select(:eng_lev_2, [['Elementary'], ['Pre-intermediate'], ['Intermediate'], ['Upper-intermediate'], ['Perfection'], ['Native']]) %>
+      </p>
+    <br>
+    <p class="birth date">
+      <%= f.label :birth_date_2 , "Birth Date" %><br>
+      <%= f.text_field :birth_date_2, class: 'form'%>
+    </p>
+    <br>
+    <div class="info">
+      <%= f.label :description, "The Additional information" %><br>
+      <%= f.text_area :description %>
+    </div>
+
+<br>
+
+    <div class="actions">
+      <button class="favth-btn">
+      <%= f.submit "Create/Update", class: 'btn btn-large btn-success' %>
+        </button>
+    </div>
+<% end %>

@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ *= require easy-autocomplete
+ *= require easy-autocomplete.themes
+ *= require_tree .
+ *= require_self
+
+
+ */
+@import "bootstrap";
+
+.content{
+  min-height: calc(100vh - 84px);
+}
+
+.floating {
+  float: none;
+}
+.search_margin_top{
+  padding-top: 65px;
+  float: none;
+}
+
+.footer
+{
+  width: 100%;
+  //margin-top: 30px;
+  //position: relative;
+  //bottom: 0;
+  padding: 30px 20px;
+}
+
+footer span{
+
+  padding: 5px 5%;
+}
+a:hover{
+  backgroud-color: blue;
+  text-decoration:none;
+}
+:focus{
+  outline-color: #80bdff;
+}
+
+.font_nav{
+
+  font-size: 20px;
+}
+.card-img-top a:hover{
+  opacity: 1;
+}
+.carousel{
+  //max-height: 150px;
+  //padding: 0 10%;
+  width: 70%;
+  padding: 0 20px;
+  margin:0 auto;
+}
+.short-text{
+
+  //	height: 340px;
+}
+body{
+  //		height: 100%;
+
+}
+
+.carousel-inner{
+  max-height: 300px;
+}
+
+
+.custom-file-control:lang(en)::before {
+  content: "Browse";
+}
+.custom-file-control:lang(en):empty::after {
+  content: "Choose file...";
+}
+.line_select{
+  line-height: 2;
+  padding: 0;
+}
+
+.custom-file-control:lang(en)::before {
+  content: "Browse";
+}
+.custom-file-control:lang(en):empty::after {
+  content: "Choose file...";
+}

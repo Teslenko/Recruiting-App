@@ -1,0 +1,98 @@
+<head>
+<style>
+#Show_page_Name{
+    width: 55%;
+  }
+  table{
+    width: 500px;
+    height: 70px;
+    text-align: center;
+    overflow: scroll;
+    overflow: auto; padding: 40px;
+
+  }
+
+  #Show_page_Image{
+
+    text-align: center;
+  }
+</style>
+</head>
+
+
+<body class="">
+
+<h1>Description the Candidate</h1>
+<br>
+
+<div class="input-group-addon">
+  <div id="error_explanation2">
+    <table id="example"   cellspacing="10"  border="2" class="table table-bordered table-striped fixedtable" >
+
+
+      <tr>
+        <th  id="Show_page_Image" colspan="2"> <%= image_tag @pet.image.thumb.url %></th>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Name" ><strong>Name:</strong></td><td id="Show_page_Name" ><%= @pet.name %></td>
+      </tr>
+
+<tr>
+        <td id="Show_page_Company:" ><strong>Position:</strong></td><td id="Show_page_Name" ><%= @pet.city_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Skills:" ><strong>Company:</strong></td><td id="Show_page_Name" > <%= @pet.company_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Birth Date:" ><strong>Birth Date:</strong></td><td id="Show_page_Name" > <%= @pet.birth_date_2%></td>
+      </tr>
+
+      
+
+      <tr>
+        <td id="Show_page_Birth Date:" ><strong>Level:</strong></td><td id="Show_page_Name" ><%= @pet.position_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_The_Additional_information" ><strong>Skills:</strong></td><td id="Show_page_Name" ><%= @pet.skills_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Show_page_Position:" ><strong>Expirience:</strong></td><td id="Show_page_Name" ><%= @pet.expirience_2%></td>
+      </tr>
+
+      
+
+      <tr>
+        <td id="Show_page_Expirience:" ><strong>Salary'$':</strong></td><td id="Show_page_Name" ><%= @pet.salary_2%></td>
+      </tr>      
+
+      <tr>
+        <td id="Show_page_Salary'$':" ><strong>Skype:</strong></td><td id="Show_page_Name" ><%= @pet.skype_2%></td>
+      </tr>
+
+      <tr>
+        <td id="Telephone:" ><strong>Telephone:</strong></td><td id="Show_page_Name" ><%= @pet.telephone_2%></td>
+      </tr>
+
+      <tr>
+        <td id="English Level:"><strong>English Level:</strong></td><td id="Show_page_Name" ><%= @pet.eng_lev_2%></td>
+      </tr>
+
+<tr>
+        <td id="Show_page_Name:" ><strong>The Additional information</strong></td><td id="Show_page_Name" ><%= @pet.description %></td>
+      </tr>
+
+    </table>
+  </div>
+</div>
+
+<div class="ttt" >
+  <%= link_to 'Edit', edit_pet_path(@pet), class: "btn btn-large btn-primary" %> |
+  <%= link_to 'Back', pets_path, class: "btn btn-large btn-primary" %>
+</div>
+
+</body >
